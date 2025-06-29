@@ -1,8 +1,8 @@
-import { Button } from "../Button";
+import { Button } from "./Button";
 import { MdOutlineAccountBalanceWallet } from "react-icons/md";
 import { IoGlobeOutline } from "react-icons/io5";
 import { useTranslation } from "react-i18next";
-import LanguageSelector from "../LanguageSelector";
+import LanguageSelector from "./LanguageSelector";
 
 export default function Navbar() {
 	const { t } = useTranslation();
@@ -23,11 +23,11 @@ export default function Navbar() {
 				</div>
 
 				<div className="w-fit flex items-center gap-x-10">
-					<Button name={t("connect wallet")} icon={<MdOutlineAccountBalanceWallet className="text-3xl" />} />
 					<div className="flex rounded-xl cursor-pointer border-secondary border py-4 px-6 gap-x-3 items-center">
 						<IoGlobeOutline className="text-3xl" />
 						<LanguageSelector />
 					</div>
+					<Button name={t("connect wallet")} icon={<MdOutlineAccountBalanceWallet className="text-3xl" />} />
 				</div>
 			</div>
 		</div>

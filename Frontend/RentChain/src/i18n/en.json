@@ -2,5 +2,10 @@
 	"about": "About",
 	"browse listings": "Browse Listings",
 	"connect wallet": "Connect Wallet",
-	"contact": "contact"
+	"contact": "contact",
+	"hero": {
+		"heading": "RentChain",
+		"subheading": "Rent Smarter with RentChain",
+		"description": "Secure, transparent rentals for houses and offices on the blockchain. Build your rental credit while enjoying decentralized payments and global accessibility."
+	}
 }
