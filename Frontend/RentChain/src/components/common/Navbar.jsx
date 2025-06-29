@@ -9,7 +9,7 @@ export default function Navbar() {
 
 	return (
 		<div className="w-full h-full">
-			<div className="flex items-center justify-between py-7 px-10 shadow-xl">
+			<div className="flex items-center justify-between py-7 px-20 shadow-xl">
 				<div className="w-fit cursor-pointer">
 					<h1 className="text-5xl font-bold">rentChain</h1>
 				</div>
