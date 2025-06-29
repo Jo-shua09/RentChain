@@ -29,7 +29,7 @@ export default function Navbar() {
 				</div>
 
 				<div className="w-fit flex items-center gap-x-10">
-					<div className="flex rounded-xl cursor-pointer border-secondary border py-4 px-6 gap-x-3 items-center">
+					<div className="flex rounded-xl cursor-pointer px-8 py-6 border-secondary border gap-x-3 items-center">
 						<IoGlobeOutline className="text-3xl" />
 						<LanguageSelector />
 					</div>

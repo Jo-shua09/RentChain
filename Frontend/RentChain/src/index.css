@@ -21,6 +21,10 @@ body {
 	padding: 10rem 0;
 }
 
+.section-page {
+	padding: 0 5rem;
+}
+
 html {
 	font-size: 62.5%;
 	scroll-behavior: smooth;
