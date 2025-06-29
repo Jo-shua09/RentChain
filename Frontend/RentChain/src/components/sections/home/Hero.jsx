@@ -6,7 +6,7 @@ export default function Hero() {
 	const { t } = useTranslation();
 	return (
 		<div className="w-full h-full bg-primary section">
-			<div className="section-page">
+			<div className="section-page mt-28">
 				<div className="md:w-[65%] text-center m-auto text-white">
 					<h1 className="md:text-[7rem] text-8xl leading-none font-bold ">
 						{t("hero.title")} <span className="text-yellow-500">RentChain</span>

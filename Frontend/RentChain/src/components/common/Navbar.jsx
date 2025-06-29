@@ -9,20 +9,20 @@ export default function Navbar() {
 
 	return (
 		<div className="w-full h-full">
-			<div className="lg:flex items-center justify-between py-2 px-20 shadow-xl z-10 fixed w-full bg-white">
+			<div className="lg:flex items-center justify-between py-2 px-20  shadow-xl z-10 fixed w-full bg-white">
 				<div className="w-fit cursor-pointer">
 					<img src="/logo.png" alt="logo image" loading="lazy" className="w-[25rem] h-fit cursor-pointer" />
 				</div>
 
 				<div className="w-full">
-					<ul className="flex items-center justify-center gap-10">
-						<li className="list-none text-[1.7rem] font-medium cursor-pointer hover:border-b-2 w-fit h-fit border-primary  transition-all duration-200">
+					<ul className="flex items-center justify-center gap-16">
+						<li className="list-none text-[1.7rem] font-medium cursor-pointer hover:text-primary hover:font-bold w-fit h-fit transition-colors duration-200">
 							{t("about")}
 						</li>
-						<li className="list-none text-[1.7rem] font-medium cursor-pointer hover:border-b-2 w-fit h-fit border-primary  transition-all duration-200 text-nowrap">
+						<li className="list-none text-[1.7rem] font-medium cursor-pointer hover:text-primary hover:font-bold w-fit h-fit transition-colors duration-200 text-nowrap">
 							{t("browse listings")}
 						</li>
-						<li className="list-none text-[1.7rem] font-medium cursor-pointer hover:border-b-2 w-fit h-fit border-primary  transition-all duration-200">
+						<li className="list-none text-[1.7rem] font-medium cursor-pointer hover:text-primary hover:font-bold w-fit h-fit transition-colors duration-200">
 							{t("contact")}
 						</li>
 					</ul>
