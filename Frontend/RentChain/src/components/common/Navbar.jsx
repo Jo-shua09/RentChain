@@ -9,7 +9,7 @@ export default function Navbar() {
 
 	return (
 		<div className="w-full h-full">
-			<div className="flex items-center justify-between py-2 px-20 shadow-xl">
+			<div className="lg:flex items-center justify-between py-2 px-20 shadow-xl z-10 fixed w-full bg-white">
 				<div className="w-fit cursor-pointer">
 					<img src="/logo.png" alt="logo image" loading="lazy" className="w-[25rem] h-fit cursor-pointer" />
 				</div>
