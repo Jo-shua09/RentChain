@@ -40,4 +40,7 @@ html {
 	html {
 		font-size: 50.5%;
 	}
+	.section-page {
+		padding: 0 3rem;
+	}
 }
