@@ -23,17 +23,17 @@ export default function Hero() {
 					<div className="flex items-center sm:flex-nowrap flex-wrap gap-16 justify-between mt-20">
 						<div className="space-y-1 w-full">
 							<h3 className="text-6xl font-bold text-yellow-500">1,000+</h3>
-							<p className="text-3xl font-medium">Properties Listed</p>
+							<p className="text-3xl font-medium">{t("hero.listed")}</p>
 						</div>
 
 						<div className="space-y-1 w-full">
 							<h3 className="text-6xl font-bold text-yellow-500">500+</h3>
-							<p className="text-3xl font-medium">Happy Tenants</p>
+							<p className="text-3xl font-medium">{t("hero.tenants")}</p>
 						</div>
 
 						<div className="space-y-1 w-full">
 							<h3 className="text-6xl font-bold text-yellow-500">50+</h3>
-							<p className="text-3xl font-medium">Cities Worldwide</p>
+							<p className="text-3xl font-medium">{t("hero.cities")} </p>
 						</div>
 					</div>
 				</div>

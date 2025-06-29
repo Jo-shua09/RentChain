@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 import { IoLockClosedOutline } from "react-icons/io5";
 import { FaRegStar } from "react-icons/fa";
 import { IoGlobeOutline } from "react-icons/io5";
@@ -7,11 +8,12 @@ import { MdOutlinePayment } from "react-icons/md";
 import { IoChatbubbleOutline } from "react-icons/io5";
 
 export default function Features() {
+	const { t } = useTranslation();
 	const [features, setFeatures] = useState([]);
 
 	const iconComponents = {
-		FaRegStar: FaRegStar,
 		IoLockClosedOutline: IoLockClosedOutline,
+		FaRegStar: FaRegStar,
 		IoGlobeOutline: IoGlobeOutline,
 		LuShield: LuShield,
 		MdOutlinePayment: MdOutlinePayment,
@@ -19,32 +21,39 @@ export default function Features() {
 	};
 
 	useEffect(() => {
+		// Load the features structure with icons
 		fetch("/Features.json")
 			.then((res) => res.json())
-			.then((json) => setFeatures(json))
+			.then((featuresData) => {
+				// Get translated content
+				const translatedFeatures = t("features.items", { returnObjects: true });
+
+				// Merge the icon data with translated content
+				const mergedFeatures = featuresData.map((feature) => {
+					const translated = translatedFeatures.find((tf) => tf.id === feature.id);
+					return {
+						...feature,
+						title: translated?.title || feature.title,
+						desc: translated?.desc || feature.desc,
+					};
+				});
+
+				setFeatures(mergedFeatures);
+			})
 			.catch((err) => console.log(err));
-	}, []);
+	}, [t]);
 
 	return (
 		<div className="w-full section">
 			<div className="section-page">
 				<div className="text-center">
-					<h3 className="text-6xl font-semibold mb-8">Why Choose RentChain?</h3>
-					<p className="text-3xl font-normal text-secondary normal-case max-w-7xl m-auto">
-						Experience the future of rentals with blockchain technology, secure payments, and transparent record-keeping
-					</p>
+					<h3 className="text-6xl font-semibold mb-8">{t("features.title")}</h3>
+					<p className="text-3xl font-normal text-secondary normal-case max-w-7xl m-auto">{t("features.subtitle")}</p>
 				</div>
 
 				<div className="w-full grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 justify-between gap-16 mt-20">
 					{features.map((feature) => {
-						const IconComponent =
-							iconComponents[feature.icon] ||
-							IoLockClosedOutline ||
-							FaRegStar ||
-							IoGlobeOutline ||
-							LuShield ||
-							MdOutlinePayment ||
-							IoChatbubbleOutline;
+						const IconComponent = iconComponents[feature.icon] || IoLockClosedOutline;
 						return (
 							<div
 								key={feature.id}
