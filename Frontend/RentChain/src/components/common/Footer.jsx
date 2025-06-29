@@ -5,10 +5,11 @@ export default function Footer() {
 		<div className="w-full mt-32">
 			<div className="bg-gray-900 w-full !py-20 section-page text-white">
 				<div className="flex items-start gap-16 justify-between md:flex-nowrap flex-wrap">
-					<div className="space-y-7 md:flex-[2]">
+					<div className="space-y-5 md:flex-[2]">
 						<div className="w-fit cursor-pointer">
-							<h1 className="text-5xl font-bold">rentChain</h1>
+							<img src="/logo_white.png" alt="logo image" loading="lazy" className="w-[18rem] h-fit cursor-pointer" />
 						</div>
+
 						<p className="text-secondary max-w-4xl font-normal normal-case text-3xl">
 							The world's first decentralized rental platform built on blockchain technology. Secure, transparent, and
 							accessible to everyone.
