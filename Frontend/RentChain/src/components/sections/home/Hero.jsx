@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 
 export default function Hero() {
 	const { t } = useTranslation();
+
 	return (
 		<div className="w-full h-full bg-primary section">
 			<div className="section-page mt-28">
