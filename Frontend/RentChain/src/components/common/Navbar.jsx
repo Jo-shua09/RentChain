@@ -16,9 +16,15 @@ export default function Navbar() {
 
 				<div className="w-full">
 					<ul className="flex items-center justify-center gap-10">
-						<li className="list-none text-[1.7rem] font-medium cursor-pointer">{t("about")}</li>
-						<li className="list-none text-[1.7rem] font-medium cursor-pointer text-nowrap">{t("browse listings")}</li>
-						<li className="list-none text-[1.7rem] font-medium cursor-pointer">{t("contact")}</li>
+						<li className="list-none text-[1.7rem] font-medium cursor-pointer hover:border-b-2 w-fit h-fit border-primary  transition-all duration-200">
+							{t("about")}
+						</li>
+						<li className="list-none text-[1.7rem] font-medium cursor-pointer hover:border-b-2 w-fit h-fit border-primary  transition-all duration-200 text-nowrap">
+							{t("browse listings")}
+						</li>
+						<li className="list-none text-[1.7rem] font-medium cursor-pointer hover:border-b-2 w-fit h-fit border-primary  transition-all duration-200">
+							{t("contact")}
+						</li>
 					</ul>
 				</div>
 

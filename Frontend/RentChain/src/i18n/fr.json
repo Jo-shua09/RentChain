@@ -2,5 +2,9 @@
 	"about": "À propos",
 	"browse listings": "Parcourir les annonces",
 	"connect wallet": "Connecter le portefeuille",
-	"contact": "Contact"
+	"contact": "Contact",
+	"hero": {
+		"title": "Louez plus intelligemment avec",
+		"description": "Des locations sécurisées et transparentes pour maisons et bureaux sur la blockchain. Construisez votre crédit locatif tout en profitant de paiements décentralisés et d'une accessibilité mondiale."
+	}
 }

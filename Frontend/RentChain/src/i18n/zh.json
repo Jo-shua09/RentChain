@@ -2,5 +2,9 @@
 	"about": "关于",
 	"browse listings": "浏览房源",
 	"connect wallet": "连接钱包",
-	"contact": "联系"
+	"contact": "联系",
+	"hero": {
+		"title": "用 更智能地租赁",
+		"description": "为房屋和办公空间提供安全透明的区块链租赁服务。在享受去中心化支付和全球可访问性的同时建立您的租赁信用。"
+	}
 }

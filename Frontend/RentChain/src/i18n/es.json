@@ -2,5 +2,9 @@
 	"about": "Acerca de",
 	"browse listings": "Explorar listados",
 	"connect wallet": "Conectar billetera",
-	"contact": "Contacto"
+	"contact": "Contacto",
+	"hero": {
+		"title": "Alquila de forma más inteligente con",
+		"description": "Alquileres seguros y transparentes para casas y oficinas en la blockchain. Construye tu historial de crédito de alquiler mientras disfrutas de pagos descentralizados y accesibilidad global."
+	}
 }

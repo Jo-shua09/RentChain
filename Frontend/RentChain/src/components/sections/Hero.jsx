@@ -7,13 +7,10 @@ export default function Hero() {
 	return (
 		<div className="w-full h-full bg-primary section">
 			<div className="w-[60%] text-center m-auto text-white">
-				<h1 className="text-[7rem] font-bold ">
-					Rent Smarter with <span className="text-yellow-500">RentChain</span>
+				<h1 className="text-[7rem] leading-none font-bold ">
+					{t("hero.title")} <span className="text-yellow-500">RentChain</span>
 				</h1>
-				<p className="text-5xl font-normal normal-case py-8">
-					Secure, transparent rentals for houses and offices on the blockchain. Build your rental credit while enjoying
-					decentralized payments and global accessibility.
-				</p>
+				<p className="text-5xl font-normal normal-case py-8">{t("hero.description")}</p>
 				<div className="flex items-center gap-x-7 w-fit m-auto mt-10">
 					<ButtonTwo name={t("browse listings")} icon={<FaSearch className="text-3xl" />} />
 					<ButtonTwo name={t("placeholder text")} />
