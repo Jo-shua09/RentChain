@@ -1,5 +1,9 @@
-import React from "react";
+import DashboardLayout from "../layouts/DashboardLayout";
 
 export default function TenantDashboard() {
-  return <div></div>;
+  return (
+    <div>
+      <DashboardLayout />
+    </div>
+  );
 }
