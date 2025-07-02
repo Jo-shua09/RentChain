@@ -1,6 +1,9 @@
 import { HiOfficeBuilding, HiOutlineUserCircle } from "react-icons/hi";
-import { IoArrowBackSharp } from "react-icons/io5";
+import { IoArrowBackSharp, IoHomeOutline, IoPeople } from "react-icons/io5";
+import { GrVmMaintenance } from "react-icons/gr";
 import { Link, useNavigate } from "react-router-dom";
+import { MdOutlinePayments } from "react-icons/md";
+import { FaRegBuilding } from "react-icons/fa";
 
 export default function DashboardType() {
   const navigate = useNavigate();
@@ -15,27 +18,65 @@ export default function DashboardType() {
         <span className="text-3xl font-medium">Back</span>
       </div>
 
-      <div className="w-full px-6 py-12 mx-auto bg-white shadow-xl max-w-7xl rounded-2xl">
+      <div className="w-full px-6 py-12 mx-auto">
         <div className="space-y-4 text-center">
-          <h3 className="text-5xl font-bold text-gray-800">Choose Your Path</h3>
-          <p className="text-3xl normal-case text-secondary">Let us know who you are so we can tailor your experience.</p>
+          <h3 className="text-5xl font-bold text-gray-800">Welcome to RentChain</h3>
+          <p className="text-3xl normal-case text-secondary">Choose your role to access the appropriate dashboard</p>
         </div>
 
-        <div className="grid grid-cols-1 gap-8 mt-12 md:grid-cols-2">
+        <div className="grid w-[80%] m-auto grid-cols-1 gap-8 mt-12 md:grid-cols-2">
           {/* Landlord Option */}
-          <Link to="/landlord dashboard"></Link>
+          <Link to="/landlord dashboard">
+            <div className="p-6 bg-white border border-gray-200 cursor-pointer group rounded-xl hover:shadow-xl hover:scale-95">
+              <div className="flex flex-col p-10 space-y-6 text-center">
+                <HiOfficeBuilding className="p-3 m-auto text-white rounded-full textcent text-8xl bg-primary" />
+                <h4 className="text-5xl font-semibold normal-case text-primary">I am a Landlord</h4>
+                <p className="text-3xl font-medium normal-case text-secondary">Manage properties, tenants, and rental income</p>
+                <ul className="flex flex-col items-start space-y-4 text-2xl text-left text-gray-600">
+                  <li className="flex items-center list-none gap-x-4">
+                    <IoHomeOutline className="text-4xl text-primary" />
+                    Manage multiple properties
+                  </li>
+                  <li className="flex items-center list-none gap-x-4">
+                    <IoPeople className="text-4xl text-primary" />
+                    Track tenant information
+                  </li>
+                  <li className="flex items-center list-none gap-x-4">
+                    <GrVmMaintenance className="text-4xl text-primary" />
+                    Handle maintenance requests
+                  </li>
+                </ul>
+                <button className="px-6 py-4 text-[1.7rem] !mt-10 font-medium w-full h-[5.5rem] text-white rounded-xl bg-primary hover:opacity-90">
+                  Continue as Landlord
+                </button>
+              </div>
+            </div>
+          </Link>
 
           {/* Tenant Option */}
           <Link to="/tenant dashboard">
             <div className="p-6 bg-white border border-gray-200 cursor-pointer group rounded-xl hover:shadow-xl hover:scale-95">
-              <div className="flex flex-col items-center space-y-8 text-center">
-                <HiOutlineUserCircle className="p-3 text-6xl text-white rounded-full bg-primary" />
-                <h4 className="text-3xl font-semibold normal-case text-primary">I am a Tenant</h4>
-                <p className="mb-8 text-2xl text-gray-600 normal-case">
-                  Discover verified rental listings, communicate directly with landlords, and build your on-chain rental credit score using
-                  RentChain’s secure platform.
-                </p>
-                <button className="px-6 py-4 text-[1.7rem] font-medium text-white rounded-xl bg-primary hover:opacity-90">Continue as Tenant</button>
+              <div className="flex flex-col p-10 space-y-6 text-center">
+                <IoHomeOutline className="p-3 m-auto text-white bg-green-500 rounded-full textcent text-8xl" />
+                <h4 className="text-5xl font-semibold text-green-500 normal-case">I am a tenant</h4>
+                <p className="text-3xl font-medium normal-case text-secondary">Pay rent, submit requests, and manage your lease</p>
+                <ul className="flex flex-col items-start space-y-4 text-2xl text-left text-gray-600">
+                  <li className="flex items-center list-none gap-x-4">
+                    <MdOutlinePayments className="text-4xl text-green-500" />
+                    Pay rent securely
+                  </li>
+                  <li className="flex items-center list-none gap-x-4">
+                    <FaRegBuilding className="text-4xl text-green-500" />
+                    Submit maintenance requests
+                  </li>
+                  <li className="flex items-center list-none gap-x-4">
+                    <IoPeople className="text-4xl text-green-500" />
+                    Communicate with landlord
+                  </li>
+                </ul>
+                <button className="px-6 py-4 text-[1.7rem] !mt-10 font-medium w-full h-[5.5rem] text-white rounded-xl bg-green-500 hover:opacity-90">
+                  Continue as tenant
+                </button>
               </div>
             </div>
           </Link>
