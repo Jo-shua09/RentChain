@@ -6,7 +6,7 @@ import ConnectWalletPopup from "../components/ui/ConnectWalletPopup";
 export default function Home() {
   return (
     <div className="w-full h-full">
-      <ConnectWalletPopup />
+      {/* <ConnectWalletPopup /> */}
       <Hero />
       <GridShowcase />
       <Banner />

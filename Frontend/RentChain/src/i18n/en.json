@@ -75,5 +75,7 @@
     "changeEmail": "Change Email",
     "changePassword": "Change Password",
     "logout": "Logout"
-  }
+  },
+  "wallet address": "wallet address",
+  "switch network": "switch network"
 }

@@ -23,21 +23,7 @@ export default function DashboardType() {
 
         <div className="grid grid-cols-1 gap-8 mt-12 md:grid-cols-2">
           {/* Landlord Option */}
-          <Link to="/landlord dashboard">
-            <div className="p-6 bg-white border border-gray-200 cursor-pointer group rounded-xl hover:shadow-xl hover:scale-95">
-              <div className="flex flex-col items-center space-y-8 text-center">
-                <HiOfficeBuilding className="p-3 text-6xl text-white rounded-full bg-primary" />
-                <h4 className="text-3xl font-semibold normal-case text-primary">I am a Landlord</h4>
-                <p className="mb-8 text-2xl text-gray-600 normal-case">
-                  List your properties, manage tenants, and receive payments securely via RentChain’s decentralized system. Enjoy escrow,
-                  transparency, and full control.
-                </p>
-                <button className="px-6 py-4 text-[1.7rem] font-medium text-white rounded-xl bg-primary hover:opacity-90">
-                  Continue as Landlord
-                </button>
-              </div>
-            </div>
-          </Link>
+          <Link to="/landlord dashboard"></Link>
 
           {/* Tenant Option */}
           <Link to="/tenant dashboard">
