@@ -77,5 +77,6 @@
     "logout": "Logout"
   },
   "wallet address": "wallet address",
-  "switch network": "switch network"
+  "tenant dashboard": "tenant dashboard",
+  "landlord dashboard": "landlord dashboard"
 }

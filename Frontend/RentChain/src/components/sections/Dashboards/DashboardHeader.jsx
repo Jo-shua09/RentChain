@@ -10,14 +10,17 @@ export default function DashboardHeader() {
   return (
     <div className="w-full section-page">
       <div className="flex items-center justify-between">
-        <div className="space-y-4">
-          <h2 className="text-5xl font-semibold">{t("dashboard")}</h2>
-          {pathName === "/landlord%20dashboard" ? (
-            <p className="text-3xl font-medium normal-case text-secondary"> {t("Tdashboard")} </p>
-          ) : (
+        {pathName === "/landlord%20dashboard" ? (
+          <div className="space-y-4">
+            <h2 className="text-5xl font-semibold">{t("lanlord dashboard")}</h2>
             <p className="text-3xl font-medium normal-case text-secondary">{t("Ldashboard")}</p>
-          )}
-        </div>
+          </div>
+        ) : (
+          <div className="space-y-4">
+            <h2 className="text-5xl font-semibold">{t("tenant dashboard")}</h2>
+            <p className="text-3xl font-medium normal-case text-secondary"> {t("Tdashboard")} </p>
+          </div>
+        )}
         <div className="">
           <User />
         </div>
