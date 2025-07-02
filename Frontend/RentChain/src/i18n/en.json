@@ -3,6 +3,7 @@
   "search for property": "search for property",
   "connect wallet": "connect wallet",
   "my dashboard": "my dashboard",
+  "dashboard": "dashboard",
   "contact": "contact",
   "hero": {
     "title": "Rent Smarter with",
@@ -66,5 +67,13 @@
     "security": "Security",
     "support": "Support",
     "copyright": "© 2025 RentChain. All rights reserved."
+  },
+  "Ldashboard": "Find rentals, pay securely, and build your credit",
+  "Tdashboard": "List properties, handle rent, and stay in contro",
+  "userMenu": {
+    "changeName": "Change Name",
+    "changeEmail": "Change Email",
+    "changePassword": "Change Password",
+    "logout": "Logout"
   }
 }

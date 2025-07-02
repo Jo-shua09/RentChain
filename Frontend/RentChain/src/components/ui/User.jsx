@@ -1,8 +1,14 @@
-import React, { useState } from "react";
+import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { FaUserCircle } from "react-icons/fa";
 
 export default function User() {
   const [open, setOpen] = useState(false);
+  const { t } = useTranslation();
+
+  window.onscroll = () => {
+    setOpen(false);
+  };
 
   return (
     <div className="relative inline-block w-full text-left">
@@ -17,10 +23,10 @@ export default function User() {
             <p className="text-3xl font-medium text-secondary">John Doe</p>
           </div>
           <ul className="py-2 pb-4 pl-4 space-y-4 text-2xl text-gray-700">
-            <li className="px-4 py-4 cursor-pointer hover:bg-gray-100">Change Name</li>
-            <li className="px-4 py-4 cursor-pointer hover:bg-gray-100">Change Email</li>
-            <li className="px-4 py-4 cursor-pointer hover:bg-gray-100">Change Password</li>
-            <li className="px-4 py-4 text-red-600 cursor-pointer hover:bg-red-100">Logout</li>
+            <li className="px-4 py-4 cursor-pointer hover:bg-gray-100">{t("userMenu.changeName")}</li>
+            <li className="px-4 py-4 cursor-pointer hover:bg-gray-100">{t("userMenu.changeEmail")}</li>
+            <li className="px-4 py-4 cursor-pointer hover:bg-gray-100">{t("userMenu.changePassword")}</li>
+            <li className="px-4 py-4 text-red-600 cursor-pointer hover:bg-red-100">{t("userMenu.logout")}</li>
           </ul>
         </div>
       )}
