@@ -12,7 +12,7 @@ export default function DashboardHeader() {
       <div className="flex items-center justify-between">
         <div className="space-y-4">
           <h2 className="text-5xl font-semibold">{t("dashboard")}</h2>
-          {pathName == "/landlord dashboard" ? (
+          {pathName === "/landlord%20dashboard" ? (
             <p className="text-3xl font-medium normal-case text-secondary"> {t("Tdashboard")} </p>
           ) : (
             <p className="text-3xl font-medium normal-case text-secondary">{t("Ldashboard")}</p>

@@ -8,13 +8,14 @@ import ScrollToTop from "../components/ScrollToTop";
 import DashboardType from "../components/ui/DashboardType";
 import TenantDashboard from "../pages/TenantDashboard";
 import LandLordDashboard from "../pages/LandLordDashboard";
+import ConnectWallet from "../pages/ConnectWallet";
 
 export default function AppRouter() {
   return (
     <Router>
       <ScrollToTop />
       <Routes>
-        <Route path="/" element={<Authentication />} />
+        <Route path="/" element={<ConnectWallet />} />
         <Route path="/dashboard" element={<DashboardType />} />
         <Route element={<AppLayout />}>
           <Route path="/about" element={<Home />} />
