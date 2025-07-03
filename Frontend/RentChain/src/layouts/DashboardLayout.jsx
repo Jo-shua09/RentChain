@@ -1,11 +1,13 @@
 import DashboardHeader from "../components/sections/Dashboards/DashboardHeader";
 import DashboardNavigation from "../components/sections/Dashboards/DashboardNavigation";
+import DashboardShowCase from "../components/sections/Dashboards/DashboardShowCase";
 
 export default function DashboardLayout() {
   return (
-    <div className="w-full h-full bg-gray-100 py-52">
+    <div className="w-full h-full bg-gray-50 py-52">
       <DashboardHeader />
       <DashboardNavigation />
+      <DashboardShowCase />
     </div>
   );
 }
