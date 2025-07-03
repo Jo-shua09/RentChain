@@ -1,6 +1,6 @@
 export default function PropertyCard() {
   return (
-    <div className="">
+    <div className="w-full">
       <div className="">hello</div>
     </div>
   );
