@@ -1,7 +1,3 @@
-Here's a polished and professional `README.md` tailored for your **RentChain** frontend project:
-
----
-
 ## 🏠 RentChain – Decentralized Rental Platform
 
 **RentChain** is a modern, decentralized rental web app that enables landlords and tenants to interact securely, transparently, and globally. Built with **React**, **React Router**, **Tailwind CSS**, and **i18next**, the app supports multilingual interfaces, blockchain integration, and smart user experiences.
