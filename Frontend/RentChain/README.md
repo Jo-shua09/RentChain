@@ -23,9 +23,7 @@
 - **Tailwind CSS**
 - **i18next** for localization
 - **React Icons**
-- **React Hook Form** (if used for validation)
-- **Context API / State Management**
-- **(Optional)** Web3 / Wallet Integration libraries
+- **Web3 / Wallet Integration libraries**
 
 ---
 
