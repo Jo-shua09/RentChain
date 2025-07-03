@@ -13,7 +13,7 @@ import TenantDashboard from "../pages/TenantDashboard";
 import LandLordDashboard from "../pages/LandLordDashboard";
 
 // Nested under dashboards
-import MyProperties from "../pages/MyProperties";
+import MyProperties from "../components/sections/Listings/MyProperties";
 import Properties from "../components/sections/Listings/Properties";
 
 export default function AppRouter() {
