@@ -64,7 +64,7 @@ export default function Navbar() {
       </div>
     </div>
   ) : (
-    <div className="fixed z-10 w-full px-12 bg-white shadow-xl sm:px-20">
+    <div className="fixed z-10 w-full px-12 bg-white shadow-sm sm:px-20">
       <div className="flex items-center justify-between w-full">
         <Link to="/">
           <div className="cursor-pointer w-fit">
@@ -80,7 +80,7 @@ export default function Navbar() {
           )}
         </div>
       </div>
-      <div className={`w-full bg-white ${isOpen ? "opacity-100 translate-y-0 h-full pb-14" : "opacity-0 -translate-y-8 h-0"}`}>
+      <div className={`w-full bg-white ${isOpen ? "opacity-100 translate-y-0 pb-14 block" : "opacity-0 -translate-y-8 hidden"}`}>
         <hr className="w-full h-px my-2 mb-8 bg-secondary" />
 
         <ul className="flex flex-col justify-start gap-16">
@@ -90,12 +90,6 @@ export default function Navbar() {
           >
             {t("about")}
           </Link>
-          {/* <Link
-            to="/listings"
-            className="list-none text-[1.7rem] font-medium cursor-pointer hover:text-primary hover:font-bold w-fit h-fit transition-colors duration-200 text-nowrap"
-          >
-            {t("browse listings")}
-          </Link> */}
           <Link
             to="/dashboard"
             className="list-none text-[1.7rem] font-medium cursor-pointer hover:text-primary hover:font-bold w-fit h-fit transition-colors duration-200 text-nowrap"
