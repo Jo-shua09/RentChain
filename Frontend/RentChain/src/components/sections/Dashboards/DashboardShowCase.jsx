@@ -9,7 +9,7 @@ export default function DashboardShowCase() {
 
   return (
     <div className="w-full section-page">
-      {pathname == "/landlord%20dashboard" ? (
+      {pathname == "/dashboard/landlord-dashboard" ? (
         <div className="grid justify-between w-full grid-cols-2 gap-10 md:grid-cols-3 lg:grid-cols-4">
           <div className="w-full p-8 bg-white border border-gray-200 shadow-sm rounded-xl space-y-7">
             <div className="flex items-center justify-between">

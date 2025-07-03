@@ -13,7 +13,7 @@ export default function RecentActivities() {
           <span className="text-5xl font-semibold">recent activities</span>
         </div>
 
-        {pathname == "/landlord%20dashboard" ? (
+        {pathname == "/dashboard/landlord-dashboard" ? (
           <div className="w-full !mt-16 space-y-8">
             <div className="flex items-center justify-between w-full border border-gray-200 p-7 rounded-xl">
               <div className="flex items-center w-full gap-x-10">

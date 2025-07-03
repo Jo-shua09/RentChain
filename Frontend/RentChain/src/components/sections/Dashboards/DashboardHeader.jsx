@@ -10,7 +10,7 @@ export default function DashboardHeader() {
   return (
     <div className="w-full section-page">
       <div className="flex flex-wrap items-center justify-between gap-10 mt-10 md:mt-0">
-        {pathName === "/landlord%20dashboard" ? (
+        {pathName == "/dashboard/landlord-dashboard" ? (
           <div className="space-y-4">
             <h2 className="text-5xl font-semibold">{t("lanlord dashboard")}</h2>
             <p className="text-3xl font-medium normal-case text-secondary">{t("Ldashboard")}</p>

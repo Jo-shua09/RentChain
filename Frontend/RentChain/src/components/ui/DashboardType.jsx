@@ -26,7 +26,7 @@ export default function DashboardType() {
 
         <div className="grid w-[80%] m-auto grid-cols-1 gap-8 mt-12 md:grid-cols-2">
           {/* Landlord Option */}
-          <Link to="/landlord dashboard">
+          <Link to="/dashboard/landlord-dashboard">
             <div className="p-6 bg-white border border-gray-200 cursor-pointer group rounded-xl hover:shadow-xl hover:scale-95">
               <div className="flex flex-col p-10 space-y-6 text-center">
                 <HiOfficeBuilding className="p-3 m-auto text-white rounded-full textcent text-8xl bg-primary" />
@@ -54,7 +54,7 @@ export default function DashboardType() {
           </Link>
 
           {/* Tenant Option */}
-          <Link to="/tenant dashboard">
+          <Link to="/dashboard/tenant-dashboard">
             <div className="p-6 bg-white border border-gray-200 cursor-pointer group rounded-xl hover:shadow-xl hover:scale-95">
               <div className="flex flex-col p-10 space-y-6 text-center">
                 <IoHomeOutline className="p-3 m-auto text-white bg-green-500 rounded-full textcent text-8xl" />

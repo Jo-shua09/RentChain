@@ -14,7 +14,7 @@ export default function QuickAction() {
       <div className="w-full p-12 bg-white border border-gray-200 shadow-sm rounded-xl space-y-7">
         <span className="text-5xl font-semibold">quick actions</span>
 
-        {pathname == "/landlord%20dashboard" ? (
+        {pathname == "/dashboard/landlord-dashboard" ? (
           <div className="w-full !mt-16 space-y-8">
             <div className="flex items-center w-full border border-gray-200 cursor-pointer hover:scale-95 gap-x-10 p-7 rounded-xl">
               <IoAdd className="text-4xl" />
@@ -70,7 +70,7 @@ export default function QuickAction() {
           </div>
         )}
       </div>
-      {pathname !== "/landlord%20dashboard" && (
+      {pathname !== "/dashboard/landlord-dashboard" && (
         <div className="w-full p-12 bg-white border border-gray-200 shadow-sm rounded-xl space-y-7">
           <span className="text-5xl font-semibold">upcoming payments</span>
           <div className="w-full !mt-16 space-y-8">
