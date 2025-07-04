@@ -1,5 +1,4 @@
 import { FaUser } from "react-icons/fa";
-import { IoWarningOutline } from "react-icons/io5";
 import { Button, ButtonTwo } from "../common/Button";
 
 export default function Complaints() {
