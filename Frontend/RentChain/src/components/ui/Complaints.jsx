@@ -7,7 +7,7 @@ export default function Complaints() {
     {
       id: 1,
       title: "Heating System Issue",
-      property: "Sunset Apartment #12",
+      property: "Luxury Apartment in Downtown",
       description: "The heating system is not working properly in the living room.",
       date: "2024-07-01",
       code: "0x742d_481c",
@@ -16,7 +16,7 @@ export default function Complaints() {
     {
       id: 2,
       title: "Water Leak",
-      property: "Downtown Loft #5",
+      property: "Modern Studio Near Metro",
       description: "There is a water leak in the bathroom ceiling.",
       date: "2024-06-28",
       code: "0x892e_7F2d",
