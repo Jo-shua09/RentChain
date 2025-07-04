@@ -23,7 +23,7 @@ export default function PropertyDetails() {
   };
 
   const handlePayRent = () => {
-    navigate(`/dashboard/tenant-dashboard/payment`, {
+    navigate(`/dashboard/tenant-dashboard/properties/payment`, {
       state: {
         title,
         price,
