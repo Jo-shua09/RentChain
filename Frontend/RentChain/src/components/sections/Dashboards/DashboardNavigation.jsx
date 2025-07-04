@@ -17,10 +17,12 @@ export default function DashboardNavigation() {
                 <h3 className="text-4xl font-semibold ">my properties</h3>
               </div>
             </Link>
-            <div className="flex items-center w-full p-8 bg-white border shadow-sm cursor-pointer border-gray-50 md:flex-1 hover:scale-95 gap-x-8 rounded-xl">
-              <FaMoneyBill className="w-20 h-20 p-2 text-green-500 bg-gray-50 rounded-xl" />
-              <h3 className="text-4xl font-semibold "> payments</h3>
-            </div>
+            <Link to="/dashboard/landlord-dashboard/payment-management">
+              <div className="flex items-center w-full p-8 bg-white border shadow-sm cursor-pointer border-gray-50 md:flex-1 hover:scale-95 gap-x-8 rounded-xl">
+                <FaMoneyBill className="w-20 h-20 p-2 text-green-500 bg-gray-50 rounded-xl" />
+                <h3 className="text-4xl font-semibold "> payments</h3>
+              </div>
+            </Link>
             <div className="flex items-center w-full p-8 bg-white border shadow-sm cursor-pointer border-gray-50 md:flex-1 hover:scale-95 gap-x-8 rounded-xl">
               <IoWarningOutline className="w-20 h-20 p-2 text-red-500 bg-gray-50 rounded-xl" />
               <h3 className="text-4xl font-semibold "> complaints</h3>
