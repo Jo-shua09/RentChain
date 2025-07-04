@@ -15,6 +15,7 @@ import LandLordDashboard from "../pages/LandLordDashboard";
 // Nested under dashboards
 import MyProperties from "../components/sections/Listings/MyProperties";
 import Properties from "../components/sections/Listings/Properties";
+import PropertyDetails from "../components/sections/Listings/PropertyDetails";
 
 export default function AppRouter() {
   return (
@@ -26,18 +27,17 @@ export default function AppRouter() {
         <Route path="/dashboard" element={<DashboardType />} />
 
         {/* Dashboard layout with nested routes */}
-        <Route path="/dashboard" element={<AppLayout />}>
-          {/* Landlord */}
-          <Route path="landlord-dashboard" element={<LandLordDashboard />} />
-          <Route path="landlord-dashboard/my-properties" element={<MyProperties />} />
-
-          {/* Tenant */}
-          <Route path="tenant-dashboard" element={<TenantDashboard />} />
-          <Route path="tenant-dashboard/properties" element={<Properties />} />
-        </Route>
-
-        {/* Global App Pages */}
         <Route element={<AppLayout />}>
+          {/* Dashboard nested */}
+          <Route path="/dashboard/landlord-dashboard" element={<LandLordDashboard />} />
+          <Route path="/dashboard/landlord-dashboard/my-properties" element={<MyProperties />} />
+          <Route path="/dashboard/landlord-dashboard/properties/:title" element={<PropertyDetails />} />
+
+          <Route path="/dashboard/tenant-dashboard" element={<TenantDashboard />} />
+          <Route path="/dashboard/tenant-dashboard/properties" element={<Properties />} />
+          <Route path="/dashboard/tenant-dashboard/properties/:title" element={<PropertyDetails />} />
+
+          {/* Global pages */}
           <Route path="/about" element={<Home />} />
           <Route path="/contact" element={<Contact />} />
         </Route>

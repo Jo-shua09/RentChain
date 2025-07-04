@@ -19,8 +19,8 @@ export default function Navbar() {
   };
 
   return isDesktop ? (
-    <div className="fixed top-0 left-0 right-0 w-full">
-      <div className="z-10 flex items-center justify-between w-full px-20 py-2 bg-white shadow-sm">
+    <div className="fixed top-0 left-0 right-0 z-10 w-full">
+      <div className="flex items-center justify-between w-full px-20 py-2 bg-white shadow-sm">
         <Link to="/about">
           <div className="cursor-pointer w-fit">
             <img src="/logo.png" alt="logo image" loading="lazy" className="w-[25rem] h-fit cursor-pointer" />
@@ -67,7 +67,7 @@ export default function Navbar() {
       </div>
     </div>
   ) : (
-    <div className="fixed z-10 w-full px-12 bg-white shadow-sm sm:px-20">
+    <div className="fixed top-0 left-0 right-0 z-10 w-full px-12 bg-white shadow-sm sm:px-20">
       <div className="flex items-center justify-between w-full">
         <Link to="/about">
           <div className="cursor-pointer w-fit">
