@@ -18,6 +18,8 @@ import Properties from "../components/sections/Listings/Properties";
 import PropertyDetails from "../components/sections/Listings/PropertyDetails";
 import Chat from "../components/ui/Chat";
 import Payment from "../components/ui/Payment";
+import FileComplaints from "../components/ui/FileComplaints";
+import OwnedProperties from "../components/ui/OwnedProperties";
 
 export default function AppRouter() {
   return (
@@ -35,11 +37,12 @@ export default function AppRouter() {
           <Route path="/dashboard/landlord-dashboard/properties/:title" element={<PropertyDetails />} />
 
           <Route path="/dashboard/tenant-dashboard" element={<TenantDashboard />} />
-          {/* <Route path="/dashboard/tenant-dashboard/properties/:title/chat" element={<Chat />} /> */}
           <Route path="/dashboard/tenant-dashboard/payment" element={<Payment />} />
+          <Route path="/dashboard/tenant-dashboard/my-properties" element={<OwnedProperties />} />
           <Route path="/dashboard/tenant-dashboard/properties/payment" element={<Payment />} />
           <Route path="/dashboard/tenant-dashboard/properties" element={<Properties />} />
           <Route path="/dashboard/tenant-dashboard/properties/:title" element={<PropertyDetails />} />
+          <Route path="/dashboard/tenant-dashboard/File-complaints" element={<FileComplaints />} />
           <Route path="/dashboard/tenant-dashboard/chat" element={<Chat />} />
 
           <Route path="/dashboard/chat" element={<Chat />} />

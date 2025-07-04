@@ -3,7 +3,7 @@ import { FaDollarSign } from "react-icons/fa";
 import { GoPeople, GoTools } from "react-icons/go";
 import { IoAdd, IoChatboxOutline, IoHomeOutline, IoWarningOutline } from "react-icons/io5";
 import { LuNotebook } from "react-icons/lu";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 export default function QuickAction() {
   const location = useLocation();
@@ -43,10 +43,12 @@ export default function QuickAction() {
           </div>
         ) : (
           <div className="w-full !mt-16 space-y-8">
-            <div className="flex items-center w-full border border-gray-200 cursor-pointer hover:scale-95 gap-x-10 p-7 rounded-xl">
-              <CiWallet className="text-4xl" />
-              <span className="text-3xl font-medium"> poy rent</span>
-            </div>
+            <Link to="/dashboard/tenant-dashboard/my-properties">
+              <div className="flex items-center w-full border border-gray-200 cursor-pointer hover:scale-95 gap-x-10 p-7 rounded-xl">
+                <CiWallet className="text-4xl" />
+                <span className="text-3xl font-medium"> owned properties</span>
+              </div>
+            </Link>
             <div className="flex items-center w-full border border-gray-200 cursor-pointer hover:scale-95 gap-x-10 p-7 rounded-xl">
               <GoTools className="text-4xl" />
               <span className="text-3xl font-medium"> submit maintenance request</span>

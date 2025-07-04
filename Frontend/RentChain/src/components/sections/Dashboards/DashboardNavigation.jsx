@@ -46,10 +46,12 @@ export default function DashboardNavigation() {
                 <h3 className="text-4xl font-semibold ">pay rent</h3>
               </div>
             </Link>
-            <div className="flex items-center w-full p-8 bg-white border shadow-sm cursor-pointer border-gray-50 md:flex-1 hover:scale-95 gap-x-8 rounded-xl">
-              <IoWarningOutline className="w-20 h-20 p-2 text-red-500 bg-gray-50 rounded-xl" />
-              <h3 className="text-4xl font-semibold ">file complaint</h3>
-            </div>
+            <Link to="/dashboard/tenant-dashboard/File-complaints">
+              <div className="flex items-center w-full p-8 bg-white border shadow-sm cursor-pointer border-gray-50 md:flex-1 hover:scale-95 gap-x-8 rounded-xl">
+                <IoWarningOutline className="w-20 h-20 p-2 text-red-500 bg-gray-50 rounded-xl" />
+                <h3 className="text-4xl font-semibold ">file complaint</h3>
+              </div>
+            </Link>
             <Link to="/dashboard/tenant-dashboard/chat">
               <div className="flex items-center w-full p-8 bg-white border shadow-sm cursor-pointer border-gray-50 md:flex-1 hover:scale-95 gap-x-8 rounded-xl">
                 <IoChatbubbleOutline className="w-20 h-20 p-2 text-purple-500 bg-gray-50 rounded-xl" />
