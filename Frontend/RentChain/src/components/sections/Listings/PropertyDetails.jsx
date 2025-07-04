@@ -1,15 +1,20 @@
 import { IoChatboxOutline, IoLocationOutline } from "react-icons/io5";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Button, ButtonThree, ButtonTwo } from "../../common/Button";
 import { CiWallet } from "react-icons/ci";
 
 export default function PropertyDetails() {
   const { state } = useLocation();
+  const navigate = useNavigate();
   const { title, location, country, price, bedrooms, duration, bathrooms, description, type, image, listed_date, amenities, map } = state || {};
 
   if (!state) {
     return <div className="p-10 text-3xl text-center text-red-500 normal-case">Property details not found.</div>;
   }
+
+  const handleContactLandlord = () => {
+    navigate("/dashboard/tenant-dashboard/chat", { state: { title } });
+  };
 
   return (
     <div className="w-full section-page bg-gray-50 flex items-start md:flex-nowrap flex-wrap gap-10 justify-between gap-x-10 !py-52">
@@ -63,8 +68,17 @@ export default function PropertyDetails() {
         </div>
 
         <div className="flex flex-wrap items-center w-full gap-10 mt-14 sm:flex-nowrap">
-          <Button name="contact landlord" className="flex justify-center w-full" icon={<IoChatboxOutline className="text-4xl" />} />
-          <ButtonTwo name="pay rent" className="flex justify-center w-full border border-gray-300" icon={<CiWallet className="text-4xl" />} />
+          <Link to="/dashboard/tenant-dashboard/chat" className="w-full">
+            <Button
+              onClick={handleContactLandlord}
+              name="contact landlord"
+              className="flex justify-center w-full"
+              icon={<IoChatboxOutline className="text-4xl" />}
+            />
+          </Link>
+          <Link to="/dashboard/tenant-dashboard/payment" className="w-full">
+            <ButtonTwo name="pay rent" className="flex justify-center w-full border border-gray-300" icon={<CiWallet className="text-4xl" />} />
+          </Link>
         </div>
       </div>
 
@@ -90,7 +104,7 @@ export default function PropertyDetails() {
           <span className="text-5xl font-semibold">landlord information</span>
           <div className="flex items-center justify-between">
             <h3 className="text-3xl font-medium text-secondary">address</h3>
-            <span className="text-2xl font-normal"></span>
+            <span className="text-2xl italic font-normal normal-case">address</span>
           </div>
         </div>
       </div>
