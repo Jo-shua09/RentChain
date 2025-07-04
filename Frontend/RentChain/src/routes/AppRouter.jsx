@@ -20,6 +20,7 @@ import Chat from "../components/ui/Chat";
 import Payment from "../components/ui/Payment";
 import FileComplaints from "../components/ui/FileComplaints";
 import OwnedProperties from "../components/ui/OwnedProperties";
+import AddPropertyForm from "../components/ui/AddPropertyForm";
 
 export default function AppRouter() {
   return (
@@ -33,6 +34,7 @@ export default function AppRouter() {
         <Route element={<AppLayout />}>
           <Route path="/dashboard/landlord-dashboard" element={<LandLordDashboard />} />
           <Route path="/dashboard/landlord-dashboard/chat" element={<Chat />} />
+          <Route path="/dashboard/landlord-dashboard/add-new-property" element={<AddPropertyForm />} />
           <Route path="/dashboard/landlord-dashboard/my-properties" element={<MyProperties />} />
           <Route path="/dashboard/landlord-dashboard/properties/:title" element={<PropertyDetails />} />
 

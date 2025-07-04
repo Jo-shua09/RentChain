@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button, ButtonThree, ButtonTwo } from "../common/Button";
+import { Button, ButtonTwo } from "../common/Button";
 import { IoArrowBackSharp, IoWarningOutline } from "react-icons/io5";
 import { useNavigate } from "react-router-dom";
 

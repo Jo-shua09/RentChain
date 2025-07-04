@@ -19,7 +19,9 @@ export default function User() {
     </div>
   ) : (
     <div className="flex items-center w-full gap-x-10">
-      <Button name="add property" icon={<IoAdd className="text-4xl" />} />
+      <Link to="/dashboard/landlord-dashboard/add-new-property">
+        <Button name="add property" icon={<IoAdd className="text-4xl" />} />
+      </Link>
       <div className="flex items-center px-8 py-6 text-3xl font-medium border cursor-pointer hover:scale-95 border-secondary rounded-xl gap-x-6">
         <IoNotifications className="text-4xl" />
         notifications
