@@ -13,7 +13,24 @@ export default function PropertyDetails() {
   }
 
   const handleContactLandlord = () => {
-    navigate("/dashboard/tenant-dashboard/chat", { state: { title } });
+    navigate(`/dashboard/tenant-dashboard/chat`, {
+      state: {
+        title,
+        propertyId: state.id,
+        propertyImage: image,
+      },
+    });
+  };
+
+  const handlePayRent = () => {
+    navigate(`/dashboard/tenant-dashboard/payment`, {
+      state: {
+        title,
+        price,
+        propertyId: state.id,
+        propertyImage: image,
+      },
+    });
   };
 
   return (
@@ -68,17 +85,12 @@ export default function PropertyDetails() {
         </div>
 
         <div className="flex flex-wrap items-center w-full gap-10 mt-14 sm:flex-nowrap">
-          <Link to="/dashboard/tenant-dashboard/chat" className="w-full">
-            <Button
-              onClick={handleContactLandlord}
-              name="contact landlord"
-              className="flex justify-center w-full"
-              icon={<IoChatboxOutline className="text-4xl" />}
-            />
-          </Link>
-          <Link to="/dashboard/tenant-dashboard/payment" className="w-full">
+          <button onClick={handleContactLandlord} className="w-full">
+            <Button name="contact landlord" className="flex justify-center w-full" icon={<IoChatboxOutline className="text-4xl" />} />
+          </button>
+          <button onClick={handlePayRent} className="w-full">
             <ButtonTwo name="pay rent" className="flex justify-center w-full border border-gray-300" icon={<CiWallet className="text-4xl" />} />
-          </Link>
+          </button>
         </div>
       </div>
 

@@ -70,12 +70,6 @@
   },
   "Ldashboard": "Find rentals, pay securely, and build your credit",
   "Tdashboard": "List properties, handle rent, and stay in control",
-  "userMenu": {
-    "changeName": "Change Name",
-    "changeEmail": "Change Email",
-    "changePassword": "Change Password",
-    "logout": "Logout"
-  },
   "wallet address": "wallet address",
   "tenant dashboard": "tenant dashboard",
   "landlord dashboard": "landlord dashboard"

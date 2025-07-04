@@ -28,21 +28,20 @@ export default function AppRouter() {
         <Route path="/" element={<ConnectWallet />} />
         <Route path="/dashboard" element={<DashboardType />} />
 
-        {/* Dashboard layout with nested routes */}
         <Route element={<AppLayout />}>
-          {/* Dashboard nested */}
           <Route path="/dashboard/landlord-dashboard" element={<LandLordDashboard />} />
           <Route path="/dashboard/landlord-dashboard/chat" element={<Chat />} />
           <Route path="/dashboard/landlord-dashboard/my-properties" element={<MyProperties />} />
           <Route path="/dashboard/landlord-dashboard/properties/:title" element={<PropertyDetails />} />
 
           <Route path="/dashboard/tenant-dashboard" element={<TenantDashboard />} />
-          <Route path="/dashboard/tenant-dashboard/chat" element={<Chat />} />
+          {/* <Route path="/dashboard/tenant-dashboard/properties/:title/chat" element={<Chat />} /> */}
           <Route path="/dashboard/tenant-dashboard/payment" element={<Payment />} />
           <Route path="/dashboard/tenant-dashboard/properties" element={<Properties />} />
           <Route path="/dashboard/tenant-dashboard/properties/:title" element={<PropertyDetails />} />
+          <Route path="/dashboard/tenant-dashboard/chat" element={<Chat />} />
 
-          {/* Global pages */}
+          <Route path="/dashboard/chat" element={<Chat />} />
           <Route path="/about" element={<Home />} />
           <Route path="/contact" element={<Contact />} />
         </Route>
