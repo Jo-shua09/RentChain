@@ -25,13 +25,13 @@ export default function Complaints() {
 
   return (
     <div className="w-full section-page !py-52 bg-gray-50">
-      <div className=" lg:w-[70%] md:w-[85%] sm:w-[90%] w-full pt-20 mx-auto">
+      <div className=" lg:w-[70%] md:w-[85%] sm:w-[90%] w-full pt-10 mx-auto">
         <div className="mb-10 space-y-4">
           <h3 className="flex text-6xl font-semibold gap-x-5">Complaints Management</h3>
           <p className="text-3xl font-medium normal-case">Manage complaints on property from tenant</p>
         </div>
 
-        <div className="p-7 mx-auto bg-white shadow-sm rounded-xl">
+        <div className="p-10 mx-auto bg-white border border-gray-300 shadow-sm rounded-xl">
           {/* Complaints List */}
           <div className="space-y-12">
             {complaints.map((complaint) => (

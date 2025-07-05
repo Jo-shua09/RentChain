@@ -1,13 +1,9 @@
 import { useState } from "react";
 import { FiUpload, FiHome, FiWifi, FiLayers, FiDroplet, FiUser, FiShield, FiWind, FiActivity, FiArrowUp } from "react-icons/fi";
-import { IoArrowBackSharp } from "react-icons/io5";
 import { FaParking } from "react-icons/fa";
-import { useNavigate } from "react-router-dom";
 import { Button, ButtonTwo } from "../common/Button";
 
 export default function AddPropertyForm() {
-  const navigate = useNavigate();
-
   const [formData, setFormData] = useState({
     title: "",
     propertyType: "",
@@ -66,21 +62,13 @@ export default function AddPropertyForm() {
 
   return (
     <div className="w-full bg-gray-50 section-page !py-52">
-      <div className=" lg:w-[70%] md:w-[85%] sm:w-[90%] w-full pt-20 mx-auto relative">
-        <div
-          onClick={() => navigate(-1)}
-          className="flex absolute top-0 left-0 gap-x-6 items-center cursor-pointer hover:scale-95 hover:text-primary"
-        >
-          <IoArrowBackSharp className="text-4xl" />
-          <span className="text-3xl font-medium">Back</span>
-        </div>
-
-        <div className="my-10 space-y-4">
-          <h3 className="flex gap-x-5 text-6xl font-semibold">add new property</h3>
+      <div className=" lg:w-[70%] md:w-[85%] sm:w-[90%] w-full pt-10 mx-auto relative">
+        <div className="mb-10 space-y-4">
+          <h3 className="flex text-6xl font-semibold gap-x-5">add new property</h3>
           <p className="text-3xl font-medium normal-case">List your property for rent</p>
         </div>
 
-        <div className="p-7 mx-auto w-full bg-white rounded-xl shadow-sm">
+        <div className="w-full mx-auto bg-white shadow-sm p-7 rounded-xl">
           <h1 className="flex items-center mb-6 text-4xl font-bold">Property Details</h1>
 
           <form onSubmit={handleSubmit} className="mt-10">
@@ -123,7 +111,7 @@ export default function AddPropertyForm() {
                 <div>
                   <label className="block mb-4 text-3xl font-medium">Monthly Rent (USD)</label>
                   <div className="relative mt-1 rounded-md shadow-sm">
-                    <div className="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+                    <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
                       <span className=" text-[1.7rem] normal-case">$</span>
                     </div>
                     <input
@@ -179,7 +167,7 @@ export default function AddPropertyForm() {
                         name="wifi"
                         checked={formData.amenities.wifi}
                         onChange={handleAmenityChange}
-                        className="w-8 h-8 text-blue-600 rounded border-gray-300 focus:ring-blue-500"
+                        className="w-8 h-8 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
                       />
                       <span className="flex items-center ml-2 text-[1.7rem] ">
                         <FiWifi className="mr-1" /> Wi-Fi
@@ -191,7 +179,7 @@ export default function AddPropertyForm() {
                         name="furnished"
                         checked={formData.amenities.furnished}
                         onChange={handleAmenityChange}
-                        className="w-8 h-8 text-blue-600 rounded border-gray-300 focus:ring-blue-500"
+                        className="w-8 h-8 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
                       />
                       <span className="flex items-center ml-2 text-[1.7rem] ">
                         <FiLayers className="mr-1" /> Furnished
@@ -203,7 +191,7 @@ export default function AddPropertyForm() {
                         name="pool"
                         checked={formData.amenities.pool}
                         onChange={handleAmenityChange}
-                        className="w-8 h-8 text-blue-600 rounded border-gray-300 focus:ring-blue-500"
+                        className="w-8 h-8 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
                       />
                       <span className="flex items-center ml-2 text-[1.7rem] ">
                         <FiDroplet className="mr-1" /> Pool
@@ -215,7 +203,7 @@ export default function AddPropertyForm() {
                         name="balcony"
                         checked={formData.amenities.balcony}
                         onChange={handleAmenityChange}
-                        className="w-8 h-8 text-blue-600 rounded border-gray-300 focus:ring-blue-500"
+                        className="w-8 h-8 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
                       />
                       <span className="flex items-center ml-2 text-[1.7rem] ">
                         <FiHome className="mr-1" /> Balcony
@@ -231,7 +219,7 @@ export default function AddPropertyForm() {
                         name="parking"
                         checked={formData.amenities.parking}
                         onChange={handleAmenityChange}
-                        className="w-8 h-8 text-blue-600 rounded border-gray-300 focus:ring-blue-500"
+                        className="w-8 h-8 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
                       />
                       <span className="flex items-center ml-2 text-[1.7rem] ">
                         <FaParking className="mr-1" /> Parking
@@ -243,7 +231,7 @@ export default function AddPropertyForm() {
                         name="petFriendly"
                         checked={formData.amenities.petFriendly}
                         onChange={handleAmenityChange}
-                        className="w-8 h-8 text-blue-600 rounded border-gray-300 focus:ring-blue-500"
+                        className="w-8 h-8 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
                       />
                       <span className="flex items-center ml-2 text-[1.7rem] ">
                         <FiUser className="mr-1" /> Pet Friendly
@@ -255,7 +243,7 @@ export default function AddPropertyForm() {
                         name="security"
                         checked={formData.amenities.security}
                         onChange={handleAmenityChange}
-                        className="w-8 h-8 text-blue-600 rounded border-gray-300 focus:ring-blue-500"
+                        className="w-8 h-8 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
                       />
                       <span className="flex items-center ml-2 text-[1.7rem] ">
                         <FiShield className="mr-1" /> Security
@@ -271,7 +259,7 @@ export default function AddPropertyForm() {
                         name="airConditioning"
                         checked={formData.amenities.airConditioning}
                         onChange={handleAmenityChange}
-                        className="w-8 h-8 text-blue-600 rounded border-gray-300 focus:ring-blue-500"
+                        className="w-8 h-8 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
                       />
                       <span className="flex items-center ml-2 text-[1.7rem] ">
                         <FiWind className="mr-1" /> Air Conditioning
@@ -283,7 +271,7 @@ export default function AddPropertyForm() {
                         name="gym"
                         checked={formData.amenities.gym}
                         onChange={handleAmenityChange}
-                        className="w-8 h-8 text-blue-600 rounded border-gray-300 focus:ring-blue-500"
+                        className="w-8 h-8 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
                       />
                       <span className="flex items-center ml-2 text-[1.7rem] ">
                         <FiActivity className="mr-1" /> Gym
@@ -295,7 +283,7 @@ export default function AddPropertyForm() {
                         name="elevator"
                         checked={formData.amenities.elevator}
                         onChange={handleAmenityChange}
-                        className="w-8 h-8 text-blue-600 rounded border-gray-300 focus:ring-blue-500"
+                        className="w-8 h-8 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
                       />
                       <span className="flex items-center ml-2 text-[1.7rem] ">
                         <FiArrowUp className="mr-1" /> Elevator
@@ -313,7 +301,7 @@ export default function AddPropertyForm() {
                     <div className="flex justify-center text-2xl">
                       <label
                         htmlFor="file-upload"
-                        className="relative font-medium text-blue-600 bg-white rounded-xl cursor-pointer hover:text-blue-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-blue-500"
+                        className="relative font-medium text-blue-600 bg-white cursor-pointer rounded-xl hover:text-blue-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-blue-500"
                       >
                         <span className="flex items-center">
                           <FiUpload className="mr-1" /> Click to upload
@@ -345,7 +333,7 @@ export default function AddPropertyForm() {
                 <button type="button">
                   <ButtonTwo
                     name="cancel"
-                    className="px-4 py-2 text-gray-700 rounded-md border border-gray-300 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="px-4 py-2 text-gray-700 border border-gray-300 rounded-md hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500"
                   />
                 </button>
 

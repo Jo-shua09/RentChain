@@ -32,13 +32,13 @@ export default function PaymentManagement() {
 
   return (
     <div className="w-full section-page !py-52 bg-gray-50">
-      <div className="w-full mx-auto max-w-7xl">
+      <div className="w-full mx-auto md:max-w-7xl">
         <div className="my-10 space-y-4">
           <h3 className="flex text-6xl font-semibold gap-x-5">Payment management</h3>
           <p className="text-3xl font-medium normal-case">Manage your property payments</p>
         </div>
 
-        <div className="p-7 bg-white">
+        <div className="p-10 bg-white border border-gray-300 shadow-sm rounded-xl">
           {/* Property Listings */}
           <div className="space-y-12">
             {properties.map((property) => (
