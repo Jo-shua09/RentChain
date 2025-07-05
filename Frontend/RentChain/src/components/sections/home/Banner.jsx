@@ -9,7 +9,7 @@ export default function Banner() {
       <div className="flex flex-col justify-center w-full p-10 py-20 text-center text-white place-content-center bg-primary rounded-xl">
         <h3 className="mb-8 text-6xl font-semibold">{t("banner.title")}</h3>
         <p className="text-3xl font-medium normal-case">{t("banner.description")}</p>
-        <div className="flex flex-wrap items-center gap-10 m-auto mt-16 sm:flex-nowrap">
+        <div className="flex flex-wrap items-center justify-center gap-10 m-auto mt-16 sm:flex-nowrap">
           <Link to="/dashboard/tenant-dashboard/properties">
             <ButtonTwo name={t("banner.browse properties")} className="flex justify-center w-full" />
           </Link>
