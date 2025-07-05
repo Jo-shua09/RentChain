@@ -12,7 +12,7 @@ export default function PropertyCard({ property }) {
     e.stopPropagation(); // Prevent event bubbling
     const basePath = pathName.includes("tenant-dashboard") ? "/dashboard/tenant-dashboard/properties" : "/dashboard/landlord-dashboard/my-properties";
 
-    navigate(`${basePath}/${property.title.replace(/\s+/g, "-")}`, {
+    navigate(`${basePath}/${property.title}`, {
       state: {
         title: property.title,
         location: property.location,
