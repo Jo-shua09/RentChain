@@ -44,9 +44,6 @@ export default function Payment() {
   return pathname === "/dashboard/tenant-dashboard/properties/payment" ? (
     <div className="w-full section-page !py-52">
       <div className="relative w-full pt-20">
-        <h1 className="mb-6 text-5xl font-bold">Pay Rent</h1>
-        <p className="mb-6 text-3xl normal-case text-secondary">Secure payment for {propertyTitle}</p>
-
         <div
           onClick={() => navigate(-1)}
           className="absolute top-0 left-0 flex items-center cursor-pointer gap-x-6 hover:scale-95 hover:text-primary"
@@ -54,6 +51,9 @@ export default function Payment() {
           <IoArrowBackSharp className="text-4xl" />
           <span className="text-3xl font-medium">Back</span>
         </div>
+
+        <h1 className="mb-6 text-5xl font-bold">Pay Rent</h1>
+        <p className="mb-6 text-3xl normal-case text-secondary">Secure payment for {propertyTitle}</p>
         <div className="flex flex-wrap items-start justify-center gap-10 sm:flex-nowrap">
           <div className="w-full border border-gray-100 shadow-sm rounded-xl p-7">
             <h2 className="mb-4 text-4xl font-semibold">Payment Details</h2>
@@ -121,17 +121,9 @@ export default function Payment() {
     </div>
   ) : (
     <div className="w-full section-page !py-52">
-      <div className="relative w-full pt-20">
+      <div className="relative w-full pt-20 bg-white">
         <h1 className="mb-6 text-5xl font-bold">Pay Rent</h1>
         <p className="mb-6 text-3xl normal-case text-secondary">Secure payment for {selectedTitle}</p>
-
-        <div
-          onClick={() => navigate(-1)}
-          className="absolute top-0 left-0 flex items-center cursor-pointer gap-x-6 hover:scale-95 hover:text-primary"
-        >
-          <IoArrowBackSharp className="text-4xl" />
-          <span className="text-3xl font-medium">Back</span>
-        </div>
 
         {/* Property Selection Dropdown */}
         <div className="max-w-5xl mb-16">
@@ -150,7 +142,7 @@ export default function Payment() {
         </div>
 
         <div className="flex flex-wrap items-start justify-center gap-10 sm:flex-nowrap">
-          <div className="w-full border border-gray-100 shadow-sm rounded-xl p-7">
+          <div className="w-full border border-gray-300 shadow-sm rounded-xl p-7">
             <h2 className="mb-4 text-4xl font-semibold">Payment Details</h2>
             <div className="mt-10 space-y-5">
               <label className="block mb-2 text-2xl font-medium text-secondary">Amount (USD)</label>
@@ -191,7 +183,7 @@ export default function Payment() {
             </div>
           </div>
 
-          <div className="w-full border border-gray-100 shadow-sm rounded-xl p-7">
+          <div className="w-full border border-gray-300 shadow-sm rounded-xl p-7">
             <h2 className="mb-4 text-4xl font-semibold">Property Summary</h2>
             <h3 className="mb-3 text-3xl font-medium text-secondary">{selectedTitle}</h3>
 
