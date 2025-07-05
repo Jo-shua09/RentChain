@@ -32,7 +32,7 @@ export default function Filter({ properties, onFilterChange }) {
   };
 
   return (
-    <div className="w-full p-7 space-y-10 bg-white border border-gray-100 shadow-sm rounded-xl">
+    <div className="w-full space-y-10 bg-white border border-gray-300 shadow-sm p-7 rounded-xl">
       <div className="flex items-center justify-between">
         <h2 className="text-5xl font-semibold">Filters</h2>
         <button onClick={handleReset} title="Reset filters">
