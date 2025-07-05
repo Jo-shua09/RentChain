@@ -6,8 +6,8 @@ export default function ConnectWallet() {
   const navigate = useNavigate();
 
   return (
-    <div className="flex items-center justify-center w-full h-screen max-h-screen section-page bg-gray-50">
-      <div className="flex flex-col items-center w-full bg-white border border-gray-300">
+    <div className="flex items-center justify-center w-full h-screen max-h-screen overflow-hidden section-page bg-gray-50">
+      <div className="flex flex-col items-center w-full">
         <div className="mb-5 cursor-pointer w-fit">
           <img src="/logo.png" alt="logo image" loading="lazy" className="w-[20rem] h-fit cursor-pointer" />
         </div>
@@ -15,7 +15,7 @@ export default function ConnectWallet() {
         <p className="text-[1.7rem] font-medium normal-case text-center text-secondary">
           Connect your wallet to access the blockchain-powered rental ecosystem
         </p>
-        <div className="flex flex-col items-center justify-center w-full max-w-5xl px-10 py-10 mt-8 bg-white shadow-sm rounded-xl">
+        <div className="flex flex-col items-center justify-center w-full max-w-5xl px-10 py-10 mt-8 bg-white border border-gray-300 shadow-sm rounded-xl">
           <div className="flex items-center mb-5 gap-x-5">
             <IoWalletOutline className="text-6xl text-primary" />
             <h2 className="text-4xl font-semibold">Connect Wallet</h2>
