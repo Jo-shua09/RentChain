@@ -10,7 +10,9 @@ export default function PropertyCard({ property }) {
 
   const handleClick = (e) => {
     e.stopPropagation(); // Prevent event bubbling
-    const basePath = pathName.includes("tenant-dashboard") ? "/dashboard/tenant-dashboard/properties" : "/dashboard/landlord-dashboard/my-properties";
+    const basePath = pathName.includes("tenant-dashboard")
+      ? "/dashboard/tenant-dashboard/property-details"
+      : "/dashboard/landlord-dashboard/my-properties";
 
     navigate(`${basePath}/${property.title}`, {
       state: {
