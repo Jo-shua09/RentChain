@@ -9,7 +9,7 @@ export default function PropertyDetails() {
   const { title, location, country, price, bedrooms, duration, bathrooms, description, type, image, listed_date, amenities, map } = state || {};
 
   if (!state) {
-    return <div className="p-10 text-3xl text-center text-red-500 normal-case">Property details not found.</div>;
+    return <div className="p-7 text-3xl text-center text-red-500 normal-case">Property details not found.</div>;
   }
 
   const handleContactLandlord = () => {
@@ -40,7 +40,7 @@ export default function PropertyDetails() {
           <img src={image} alt={title} className="object-cover w-full h-[40rem] rounded-xl mb-10" />
         </div>
 
-        <div className="p-10 bg-white shadow-sm rounded-xl">
+        <div className="p-7 bg-white shadow-sm rounded-xl">
           <div className="flex items-start justify-between">
             <div className="w-full space-y-5">
               <h1 className="text-6xl font-bold">{title}</h1>

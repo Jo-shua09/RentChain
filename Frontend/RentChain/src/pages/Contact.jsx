@@ -16,7 +16,7 @@ export default function Contact() {
 
         <div className="flex flex-wrap items-start justify-between w-full gap-10 md:flex-nowrap">
           <div className="flex flex-col w-full gap-10">
-            <div className="p-10 bg-white border border-gray-300 rounded-xl space-y-7">
+            <div className="p-7 bg-white border border-gray-300 rounded-xl space-y-7">
               <div className="flex items-center gap-x-5">
                 <IoChatboxOutline className="text-4xl" />
                 <h3 className="text-4xl font-semibold">Live Support Chat</h3>
@@ -25,7 +25,7 @@ export default function Contact() {
               <Button name="start chat" className="flex justify-center w-full" />
             </div>
 
-            <div className="p-10 bg-white border border-gray-300 rounded-xl space-y-7">
+            <div className="p-7 bg-white border border-gray-300 rounded-xl space-y-7">
               <div className="flex items-center gap-x-5">
                 <GoQuestion className="text-4xl" />
                 <h3 className="text-4xl font-semibold">common issues</h3>
@@ -52,7 +52,7 @@ export default function Contact() {
               </div>
             </div>
 
-            <div className="p-10 bg-white border border-gray-300 rounded-xl space-y-7">
+            <div className="p-7 bg-white border border-gray-300 rounded-xl space-y-7">
               <div className="flex items-center gap-x-5">
                 <GoShield className="text-4xl" />
                 <h3 className="text-4xl font-semibold">security & privacy</h3>
@@ -67,7 +67,7 @@ export default function Contact() {
             </div>
           </div>
 
-          <div className="w-full p-10 bg-white border border-gray-300 rounded-xl">
+          <div className="w-full p-7 bg-white border border-gray-300 rounded-xl">
             <div className="flex items-center gap-x-5">
               <FaTelegramPlane className="text-4xl" />
               <h3 className="text-4xl font-semibold"> submit support request</h3>

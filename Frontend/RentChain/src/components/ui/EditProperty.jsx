@@ -91,7 +91,7 @@ const EditProperty = () => {
           </p>
         </div>
 
-        <form onSubmit={handleSubmit} className="p-10 bg-white rounded-xl">
+        <form onSubmit={handleSubmit} className="p-7 bg-white rounded-xl">
           <div className="space-y-12">
             {/* Property Title */}
             <div>

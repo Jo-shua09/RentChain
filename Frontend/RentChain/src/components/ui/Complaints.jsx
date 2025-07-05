@@ -31,7 +31,7 @@ export default function Complaints() {
           <p className="text-3xl font-medium normal-case">Manage complaints on property from tenant</p>
         </div>
 
-        <div className="p-10 mx-auto bg-white shadow-sm rounded-xl">
+        <div className="p-7 mx-auto bg-white shadow-sm rounded-xl">
           {/* Complaints List */}
           <div className="space-y-12">
             {complaints.map((complaint) => (

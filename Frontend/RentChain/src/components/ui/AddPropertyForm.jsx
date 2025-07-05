@@ -80,7 +80,7 @@ export default function AddPropertyForm() {
           <p className="text-3xl font-medium normal-case">List your property for rent</p>
         </div>
 
-        <div className="p-10 mx-auto w-full bg-white rounded-xl shadow-sm">
+        <div className="p-7 mx-auto w-full bg-white rounded-xl shadow-sm">
           <h1 className="flex items-center mb-6 text-4xl font-bold">Property Details</h1>
 
           <form onSubmit={handleSubmit} className="mt-10">

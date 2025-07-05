@@ -17,9 +17,7 @@ export default function Filter({ properties, onFilterChange }) {
     }
 
     if (location.trim() !== "") {
-      result = result.filter((p) => 
-        p.location.toLowerCase().includes(location.trim().toLowerCase())
-      );
+      result = result.filter((p) => p.location.toLowerCase().includes(location.trim().toLowerCase()));
     }
 
     result = result.filter((p) => p.price <= price);
@@ -34,7 +32,7 @@ export default function Filter({ properties, onFilterChange }) {
   };
 
   return (
-    <div className="w-full p-10 space-y-10 bg-white border border-gray-100 shadow-sm rounded-xl">
+    <div className="w-full p-7 space-y-10 bg-white border border-gray-100 shadow-sm rounded-xl">
       <div className="flex items-center justify-between">
         <h2 className="text-5xl font-semibold">Filters</h2>
         <button onClick={handleReset} title="Reset filters">
@@ -60,9 +58,7 @@ export default function Filter({ properties, onFilterChange }) {
 
       {/* Price Range Slider */}
       <div>
-        <label className="block mb-2 text-[1.7rem] font-medium">
-          Price Range: $0 - ${price.toLocaleString()}
-        </label>
+        <label className="block mb-2 text-[1.7rem] font-medium">Price Range: $0 - ${price.toLocaleString()}</label>
         <input
           type="range"
           min="0"

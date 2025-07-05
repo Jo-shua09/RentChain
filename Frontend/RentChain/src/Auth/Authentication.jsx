@@ -8,13 +8,13 @@ export default function Authentication() {
 
   return (
     <div className="w-full h-full max-h-screen py-10">
-      <div className="max-w-6xl p-10 m-auto rounded-xl">
+      <div className="max-w-6xl p-7 m-auto rounded-xl">
         <div className="m-auto cursor-pointer w-fit">
           <img src="/logo.png" alt="logo image" loading="lazy" className="w-[20rem] h-fit cursor-pointer" />
         </div>
         <p className="text-4xl font-medium text-center normal-case text-secondary">Welcome to the decentralized rental platform</p>
 
-        <div className="w-full p-10 rounded-xl shadow-[1px_1px_10px_rgba(0,0,0,0.1)] bg-white max-w-8xl m-auto mt-10">
+        <div className="w-full p-7 rounded-xl shadow-[1px_1px_10px_rgba(0,0,0,0.1)] bg-white max-w-8xl m-auto mt-10">
           <h3 className="text-4xl font-semibold text-center my-7">Access your account</h3>
 
           <div className="flex items-center justify-center p-2 px-3 bg-gray-300 gap-x-10 rounded-xl">

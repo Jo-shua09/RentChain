@@ -38,7 +38,7 @@ export default function PaymentManagement() {
           <p className="text-3xl font-medium normal-case">Manage your property payments</p>
         </div>
 
-        <div className="p-10 bg-white">
+        <div className="p-7 bg-white">
           {/* Property Listings */}
           <div className="space-y-12">
             {properties.map((property) => (
