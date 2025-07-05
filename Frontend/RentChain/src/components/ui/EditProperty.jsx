@@ -76,7 +76,7 @@ const EditProperty = () => {
 
   return (
     <div className="w-full bg-gray-50 section-page !py-52">
-      <div className=" lg:w-[70%] md:w-[85%] sm:w-[90%] w-full pt-20 mx-auto relative">
+      <div className="lg:w-[70%] md:w-[85%] sm:w-[90%] w-full pt-20 mx-auto relative">
         <div
           onClick={() => navigate(-1)}
           className="absolute top-0 left-0 flex items-center cursor-pointer gap-x-6 hover:scale-95 hover:text-primary"
@@ -91,7 +91,7 @@ const EditProperty = () => {
           </p>
         </div>
 
-        <form onSubmit={handleSubmit} className="p-7 bg-white rounded-xl">
+        <form onSubmit={handleSubmit} className="bg-white border border-gray-300 shadow-sm p-7 rounded-xl">
           <div className="space-y-12">
             {/* Property Title */}
             <div>
