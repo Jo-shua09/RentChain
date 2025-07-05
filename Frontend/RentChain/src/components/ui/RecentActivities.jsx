@@ -6,7 +6,7 @@ export default function RecentActivities() {
   const pathname = location.pathname;
 
   return (
-    <div className="w-full p-12 bg-white border border-gray-200 shadow-sm rounded-xl space-y-7">
+    <div className="w-full bg-white border border-gray-200 shadow-sm p-7 rounded-xl space-y-7">
       <div className="space-y-5">
         <div className="flex items-center gap-x-5">
           <LuClock className="text-5xl" />

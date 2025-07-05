@@ -11,7 +11,7 @@ export default function QuickAction() {
 
   return (
     <div className="flex flex-col gap-10">
-      <div className="w-full p-12 bg-white border border-gray-200 shadow-sm rounded-xl space-y-7">
+      <div className="w-full bg-white border border-gray-200 shadow-sm p-7 rounded-xl space-y-7">
         <span className="text-5xl font-semibold">quick actions</span>
 
         {pathname == "/dashboard/landlord-dashboard" ? (
