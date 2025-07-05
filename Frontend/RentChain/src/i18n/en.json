@@ -123,5 +123,77 @@
     "delete": "Delete",
     "view": "View",
     "pay": "Pay Now"
+  },
+  "dashboard": {
+    "tenant": {
+      "title": "Tenant Dashboard",
+      "welcome": "Welcome back",
+      "my_properties": "My Properties",
+      "payments": "Payments",
+      "chat": "Messages",
+      "settings": "Settings",
+      "no_properties": "No properties found"
+    },
+    "landlord": {
+      "title": "Landlord Dashboard",
+      "welcome": "Welcome back",
+      "my_listings": "My Listings",
+      "add_property": "Add Property",
+      "manage_properties": "Manage Properties",
+      "payments_received": "Payments Received",
+      "chat": "Messages",
+      "settings": "Settings"
+    }
+  },
+  "properties": {
+    "details": {
+      "description": "description",
+      "amenities": "Amenities",
+      "location": "location",
+      "landlord_info": "landlord information",
+      "address": "address",
+      "contact_landlord": "contact landlord",
+      "pay_rent": "pay rent",
+      "get_directions": "get directions",
+      "listed_on": "Listed on",
+      "bedrooms": "bedrooms",
+      "bathrooms": "bathrooms"
+    },
+    "filters": {
+      "title": "Filter Properties",
+      "property_type": "Property Type",
+      "price_range": "Price Range",
+      "bedrooms": "Bedrooms",
+      "location": "Location",
+      "apply": "Apply Filters",
+      "reset": "Reset",
+      "no_results": "No properties match your filters"
+    },
+    "add": {
+      "title": "Add New Property",
+      "subtitle": "List your property for rent",
+      "success": "Property added successfully",
+      "error": "Error adding property"
+    }
+  },
+  "chat": {
+    "title": "Messages",
+    "no_messages": "No messages yet",
+    "type_message": "Type your message...",
+    "send": "Send",
+    "chatting_with": "Chatting with Landlord for",
+    "property": "property"
+  },
+  "auth": {
+    "connect_wallet": "Connect Wallet",
+    "disconnect": "Disconnect",
+    "connected": "Connected",
+    "not_connected": "Not Connected"
+  },
+  "notifications": {
+    "success": "Success",
+    "error": "Error",
+    "warning": "Warning",
+    "info": "Information"
   }
 }
