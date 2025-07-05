@@ -71,7 +71,7 @@ export default function Navbar() {
       </div>
     </div>
   ) : (
-    <div className="fixed top-0 left-0 right-0 z-10 w-full px-12 bg-white shadow-sm sm:px-20">
+    <div className="fixed top-0 left-0 right-0 z-10 w-full px-8 bg-white shadow-sm sm:px-20">
       <div className="flex items-center justify-between w-full">
         <Link onClick={handleclick} to="/about">
           <div className="cursor-pointer w-fit">
