@@ -2,12 +2,23 @@ import { IoChatboxOutline, IoLocationOutline } from "react-icons/io5";
 import { Link, useLocation, useNavigate, useParams } from "react-router-dom";
 import { Button, ButtonThree, ButtonTwo } from "../../common/Button";
 import { CiWallet } from "react-icons/ci";
-import { useEffect } from "react";
+import Loader from "../../common/Loader";
+import { useState, useEffect } from "react";
 
 export default function PropertyDetails() {
+  const [isLoading, setIsLoading] = useState(true);
   const { state } = useLocation();
   const { id } = useParams();
   const navigate = useNavigate();
+
+  useEffect(() => {
+    setIsLoading(true);
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 800);
+
+    return () => clearTimeout(timer);
+  }, [id]);
 
   // Destructure all needed properties from state
   const { title, location, country, price, duration, bedrooms, bathrooms, description, type, image, listed_date, amenities, map } = state || {};
@@ -17,6 +28,10 @@ export default function PropertyDetails() {
       navigate("/dashboard/tenant-dashboard/properties");
     }
   }, [state, navigate]);
+
+  if (isLoading) {
+    return <Loader />;
+  }
 
   if (!state) {
     return (
