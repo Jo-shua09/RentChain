@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Button, ButtonTwo } from "../common/Button";
-import { IoArrowBackSharp, IoWarningOutline } from "react-icons/io5";
-import { useNavigate } from "react-router-dom";
+import { IoWarningOutline } from "react-icons/io5";
 
 export default function FileComplaints() {
   const [formData, setFormData] = useState({
@@ -38,19 +37,9 @@ export default function FileComplaints() {
     alert("Complaint submitted successfully!");
   };
 
-  const navigate = useNavigate();
-
   return (
     <div className="w-full section-page !py-52 bg-gray-50">
-      <div className=" lg:w-[70%] md:w-[85%] sm:w-[90%] w-full pt-20 mx-auto relative">
-        <div
-          onClick={() => navigate(-1)}
-          className="absolute top-0 left-0 flex items-center cursor-pointer gap-x-6 hover:scale-95 hover:text-primary"
-        >
-          <IoArrowBackSharp className="text-4xl" />
-          <span className="text-3xl font-medium">Back</span>
-        </div>
-
+      <div className=" lg:w-[70%] md:w-[85%] sm:w-[90%] w-full mx-auto relative">
         <div className="my-10 space-y-4">
           <h3 className="flex text-6xl font-semibold gap-x-5">
             <IoWarningOutline className="text-6xl text-red-500" />

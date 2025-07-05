@@ -72,5 +72,56 @@
   "Tdashboard": "List properties, handle rent, and stay in control",
   "wallet address": "wallet address",
   "tenant dashboard": "tenant dashboard",
-  "landlord dashboard": "landlord dashboard"
+  "landlord dashboard": "landlord dashboard",
+  "payment": {
+    "title": "Pay Rent",
+    "secure_payment": "Secure payment for",
+    "back": "Back",
+    "select_property": "Select Property",
+    "payment_details": "Payment Details",
+    "amount_usd": "Amount (USD)",
+    "payment_method": "Payment Method",
+    "crypto": "Crypto (USDC)",
+    "credit_card": "Flat (Credit Card)",
+    "property_summary": "Property Summary",
+    "monthly_rent": "Monthly Rent",
+    "landlord": "Landlord",
+    "total_amount": "Total Amount"
+  },
+  "property": {
+    "edit": {
+      "title": "Edit Property",
+      "subtitle": "Update your property information",
+      "basic_info": "Basic Information",
+      "property_title": "Property Title",
+      "property_type": "Property Type",
+      "monthly_rent": "Monthly Rent (USD)",
+      "location": "Location",
+      "bedrooms": "Bedrooms",
+      "bathrooms": "Bathrooms",
+      "description": "Description",
+      "photos": "Property Photos",
+      "upload_photos": "Click to upload new photos",
+      "save": "Save Changes",
+      "cancel": "Cancel"
+    },
+    "management": {
+      "title": "Payment Management",
+      "due_date": "Due",
+      "status": {
+        "pending": "Pending",
+        "paid": "Paid",
+        "overdue": "Overdue"
+      }
+    }
+  },
+  "common": {
+    "back": "Back",
+    "save": "Save",
+    "cancel": "Cancel",
+    "edit": "Edit",
+    "delete": "Delete",
+    "view": "View",
+    "pay": "Pay Now"
+  }
 }

@@ -32,14 +32,7 @@ export default function Chat() {
   if (!state?.title) {
     return (
       <div className="section-page !py-52 w-full">
-        <div className="relative w-full pt-24 mx-auto max-w-7xl">
-          <div
-            onClick={() => navigate(-1)}
-            className="absolute top-0 left-0 flex items-center cursor-pointer gap-x-6 hover:scale-95 hover:text-primary"
-          >
-            <IoArrowBackSharp className="text-4xl" />
-            <span className="text-3xl font-medium">Back</span>
-          </div>
+        <div className="relative w-full pt-10 mx-auto max-w-7xl">
           <h2 className="mb-4 text-5xl font-bold">Chat</h2>
           <p className="mb-6 text-[1.7rem] normal-case text-secondary">
             {pathname === "/dashboard/landlord-dashboard/chat" ? "Chatting with Tenant" : "Chatting with Landlord"}

@@ -1,6 +1,7 @@
 import { FaSearch } from "react-icons/fa";
 import { ButtonTwo } from "../../common/Button";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 export default function Hero() {
   const { t } = useTranslation();
@@ -15,11 +16,13 @@ export default function Hero() {
           <p className="py-8 text-4xl font-normal normal-case md:text-5xl">{t("hero.description")}</p>
 
           <div className="flex flex-wrap items-center justify-center w-full gap-10 m-auto mt-10 gap-x-7 sm:w-fit sm:flex-nowrap">
-            <ButtonTwo
-              name={t("search for property")}
-              className="flex items-center justify-center w-full cursor-pointer md:w-fit"
-              icon={<FaSearch className="text-3xl" />}
-            />
+            <Link to="/dashboard/tenant-dashboard/properties">
+              <ButtonTwo
+                name={t("search for property")}
+                className="flex items-center justify-center w-full cursor-pointer md:w-fit"
+                icon={<FaSearch className="text-3xl" />}
+              />
+            </Link>
           </div>
           <div className="flex flex-wrap items-center justify-between gap-16 mt-20 sm:flex-nowrap">
             <div className="w-full space-y-1">
