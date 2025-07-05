@@ -11,10 +11,10 @@ export default function Banner() {
         <p className="text-3xl font-medium normal-case">{t("banner.description")}</p>
         <div className="flex flex-wrap items-center gap-10 m-auto mt-16 sm:flex-nowrap">
           <Link to="/dashboard/tenant-dashboard/properties">
-            <ButtonTwo name={t("banner.browse properties")} className="flex items-center justify-center w-full text-center" />
+            <ButtonTwo name={t("banner.browse properties")} className="flex justify-center w-full" />
           </Link>
           <Link to="/dashboard/landlord-dashboard/add-new-property">
-            <ButtonThree name={t("banner.list your property")} className="flex items-center justify-center w-full text-center" />
+            <ButtonThree name={t("banner.list your property")} className="flex justify-center w-full" />
           </Link>
         </div>
       </div>
