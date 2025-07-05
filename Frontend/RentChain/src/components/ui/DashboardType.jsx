@@ -19,12 +19,12 @@ export default function DashboardType() {
       </div>
 
       <div className="w-full px-6 py-12 mx-auto">
-        <div className="space-y-4 text-center">
+        <div className="mt-16 space-y-4 text-center">
           <h3 className="text-5xl font-bold text-gray-800">Welcome to RentChain</h3>
           <p className="text-3xl normal-case text-secondary">Choose your role to access the appropriate dashboard</p>
         </div>
 
-        <div className="grid w-[80%] m-auto grid-cols-1 gap-8 mt-12 md:grid-cols-2">
+        <div className="grid w-full md:w-[80%] m-auto grid-cols-1 gap-8 mt-12 md:grid-cols-2">
           {/* Landlord Option */}
           <Link to="/dashboard/landlord-dashboard">
             <div className="p-6 bg-white border border-gray-200 cursor-pointer group rounded-xl hover:shadow-xl hover:scale-95">
