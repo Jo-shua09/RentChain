@@ -7,7 +7,7 @@ export default function ConnectWallet() {
 
   return (
     <div className="flex items-center justify-center w-full h-screen max-h-screen section-page bg-gray-50">
-      <div className="flex flex-col items-center w-full">
+      <div className="flex flex-col items-center w-full bg-white border border-gray-300">
         <div className="mb-5 cursor-pointer w-fit">
           <img src="/logo.png" alt="logo image" loading="lazy" className="w-[20rem] h-fit cursor-pointer" />
         </div>
