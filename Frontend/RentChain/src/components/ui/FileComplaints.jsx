@@ -167,7 +167,7 @@ export default function FileComplaints() {
               </div>
             </div>
 
-            <div className="p-4 mb-6 mt-10 border-l-4 h-[5rem] flex items-center border-yellow-400 bg-yellow-50">
+            <div className="flex items-center h-full p-4 mt-10 mb-6 border-l-4 border-yellow-400 bg-yellow-50">
               <div className="flex items-center gap-x-2">
                 <IoWarningOutline className="text-4xl text-yellow-500" />
                 <div className="ml-3">
