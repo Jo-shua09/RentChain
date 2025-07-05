@@ -8,7 +8,7 @@ export default function Authentication() {
 
   return (
     <div className="w-full h-full max-h-screen py-10">
-      <div className="max-w-6xl p-7 m-auto rounded-xl">
+      <div className="max-w-6xl m-auto p-7 rounded-xl">
         <div className="m-auto cursor-pointer w-fit">
           <img src="/logo.png" alt="logo image" loading="lazy" className="w-[20rem] h-fit cursor-pointer" />
         </div>
