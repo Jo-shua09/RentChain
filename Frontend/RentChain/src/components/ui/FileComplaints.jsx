@@ -41,14 +41,14 @@ export default function FileComplaints() {
     <div className="w-full section-page !py-52 bg-gray-50">
       <div className=" lg:w-[70%] md:w-[85%] sm:w-[90%] w-full mx-auto relative">
         <div className="my-10 space-y-4">
-          <h3 className="flex text-6xl font-semibold gap-x-5">
-            <IoWarningOutline className="text-6xl text-red-500" />
+          <h3 className="flex items-center text-5xl font-semibold md:text-6xl gap-x-5">
+            <IoWarningOutline className="text-5xl text-red-500 md:text-6xl" />
             File Maintenance Complaint
           </h3>
           <p className="text-3xl font-medium normal-case text-secondary">Report issues with your rental property</p>
         </div>
 
-        <div className="p-12 mx-auto bg-white shadow-sm rounded-xl">
+        <div className="mx-auto bg-white border border-gray-300 shadow-sm p-7 rounded-xl">
           <h1 className="mb-12 text-5xl font-bold">Complaint Details</h1>
 
           <form onSubmit={handleSubmit} className="space-y-12">

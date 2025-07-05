@@ -1,22 +1,36 @@
 import { IoChatboxOutline, IoLocationOutline } from "react-icons/io5";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate, useParams } from "react-router-dom";
 import { Button, ButtonThree, ButtonTwo } from "../../common/Button";
 import { CiWallet } from "react-icons/ci";
+import { useEffect } from "react";
 
 export default function PropertyDetails() {
   const { state } = useLocation();
+  const { id } = useParams();
   const navigate = useNavigate();
-  const { title, location, country, price, bedrooms, duration, bathrooms, description, type, image, listed_date, amenities, map } = state || {};
+
+  // Destructure all needed properties from state
+  const { title, location, country, price, duration, bedrooms, bathrooms, description, type, image, listed_date, amenities, map } = state || {};
+
+  useEffect(() => {
+    if (!state) {
+      navigate("/dashboard/tenant-dashboard/properties");
+    }
+  }, [state, navigate]);
 
   if (!state) {
-    return <div className="p-7 text-3xl text-center text-red-500 normal-case">Property details not found.</div>;
+    return (
+      <div className="w-full section-page !py-52">
+        <div className="p-7 text-3xl text-center text-red-500 normal-case">Property details not found.</div>
+      </div>
+    );
   }
 
   const handleContactLandlord = () => {
     navigate(`/dashboard/tenant-dashboard/chat`, {
       state: {
         title,
-        propertyId: state.id,
+        propertyId: id,
         propertyImage: image,
       },
     });
@@ -27,7 +41,7 @@ export default function PropertyDetails() {
       state: {
         title,
         price,
-        propertyId: state.id,
+        propertyId: id,
         propertyImage: image,
       },
     });
@@ -40,11 +54,11 @@ export default function PropertyDetails() {
           <img src={image} alt={title} className="object-cover w-full h-[40rem] rounded-xl mb-10" />
         </div>
 
-        <div className="p-7 bg-white shadow-sm rounded-xl">
-          <div className="flex items-start justify-between">
-            <div className="w-full space-y-5">
+        <div className="p-7 bg-white rounded-xl shadow-sm">
+          <div className="flex justify-between items-start">
+            <div className="space-y-5 w-full">
               <h1 className="text-6xl font-bold">{title}</h1>
-              <p className="flex mb-2 text-4xl font-medium text-secondary gap-x-5">
+              <p className="flex gap-x-5 mb-2 text-4xl font-medium text-secondary">
                 <IoLocationOutline className="text-4xl" /> {location} {country}
               </p>
               <p className="text-3xl text-secondary">
@@ -62,20 +76,20 @@ export default function PropertyDetails() {
             </div>
           </div>
 
-          <hr className="w-full h-px my-10 bg-secondary" />
+          <hr className="my-10 w-full h-px bg-secondary" />
 
           <div className="space-y-5">
             <h3 className="text-4xl font-semibold">description</h3>
             <p className="mb-6 text-[1.7rem] text-secondary normal-case font-medium">{description}</p>
           </div>
 
-          <hr className="w-full h-px my-10 bg-secondary" />
+          <hr className="my-10 w-full h-px bg-secondary" />
 
           <div className="space-y-5">
             <h3 className="mb-10 text-4xl font-semibold">Amenities</h3>
-            <ul className="flex flex-wrap gap-6 mb-6 ">
+            <ul className="flex flex-wrap gap-6 mb-6">
               {amenities?.map((item, idx) => (
-                <li key={idx} className="px-4 py-1 text-3xl font-medium bg-gray-300 text-secondary rounded-xl">
+                <li key={idx} className="px-4 py-1 text-3xl font-medium bg-gray-300 rounded-xl text-secondary">
                   {item}
                 </li>
               ))}
@@ -84,7 +98,7 @@ export default function PropertyDetails() {
           </div>
         </div>
 
-        <div className="flex flex-wrap items-center w-full gap-10 mt-14 sm:flex-nowrap">
+        <div className="flex flex-wrap gap-10 items-center mt-14 w-full sm:flex-nowrap">
           <button onClick={handleContactLandlord} className="w-full">
             <Button name="contact landlord" className="flex justify-center w-full" icon={<IoChatboxOutline className="text-4xl" />} />
           </button>
@@ -95,14 +109,14 @@ export default function PropertyDetails() {
       </div>
 
       <div className="md:flex-[2] space-y-8">
-        <div className="w-full p-12 bg-white border border-gray-200 shadow-sm rounded-xl space-y-7">
-          <div className="flex items-center gap-x-5">
+        <div className="p-12 space-y-7 w-full bg-white rounded-xl border border-gray-200 shadow-sm">
+          <div className="flex gap-x-5 items-center">
             <IoLocationOutline className="text-4xl" />
             <span className="text-5xl font-semibold">location</span>
           </div>
 
           <div className="space-y-10">
-            <div className="w-full mt-16 bg-gray-100 rounded-xl">
+            <div className="mt-16 w-full bg-gray-100 rounded-xl">
               <ButtonThree
                 onClick={() => map && window.open(map, "_blank")}
                 className="flex justify-center w-full hover:!bg-primary transition-colors duration-200 hover:!text-white !border-none !text-primary"
@@ -112,9 +126,9 @@ export default function PropertyDetails() {
           </div>
         </div>
 
-        <div className="w-full p-12 bg-white border border-gray-200 shadow-sm rounded-xl space-y-7">
+        <div className="p-12 space-y-7 w-full bg-white rounded-xl border border-gray-200 shadow-sm">
           <span className="text-5xl font-semibold">landlord information</span>
-          <div className="flex items-center justify-between">
+          <div className="flex justify-between items-center">
             <h3 className="text-3xl font-medium text-secondary">address</h3>
             <span className="text-2xl italic font-normal normal-case">address</span>
           </div>

@@ -1,5 +1,5 @@
 import { IoLocationOutline } from "react-icons/io5";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { Button, ButtonTwo } from "../common/Button";
 import { FaRegEdit } from "react-icons/fa";
 
@@ -8,14 +8,11 @@ export default function PropertyCard({ property }) {
   const location = useLocation();
   const pathName = location.pathname;
 
-  const handleClick = (e) => {
-    e.stopPropagation(); // Prevent event bubbling
-    const basePath = pathName.includes("tenant-dashboard")
-      ? "/dashboard/tenant-dashboard/properties/property-details"
-      : "/dashboard/landlord-dashboard/my-properties";
-
-    navigate(`${basePath}/${property.title}`, {
+  const handleViewProperty = (e) => {
+    e.stopPropagation();
+    navigate(`/dashboard/tenant-dashboard/properties/property-details/${property.id}`, {
       state: {
+        id: property.id, // Add this line to include the property ID
         title: property.title,
         location: property.location,
         country: property.country,
@@ -29,6 +26,7 @@ export default function PropertyCard({ property }) {
         amenities: property.amenities,
         map: property.map,
         description: property.description,
+        available: property.available // Add this line
       },
     });
   };
@@ -59,7 +57,7 @@ export default function PropertyCard({ property }) {
   };
 
   return (
-    <div className={`bg-white border p-7 border-gray-200 shadow-sm group rounded-xl hover:shadow-md`}>
+    <div className={`p-7 bg-white rounded-xl border border-gray-300 shadow-sm group hover:shadow-md`}>
       <div className="relative w-full">
         <span className="absolute px-4 py-2 text-2xl font-medium text-white rounded-full top-5 left-5 bg-primary/80">{property.type}</span>
         <img src={property.image} alt={property.title} className="object-cover w-full h-[30rem] mb-4 rounded-md" />
@@ -83,7 +81,7 @@ export default function PropertyCard({ property }) {
 
         {pathName === "/dashboard/tenant-dashboard/properties" ? (
           property.available ? (
-            <Button name="View Details" className="flex justify-center w-full mt-10" onClick={handleClick} />
+            <Button name="View Details" onClick={handleViewProperty} className="flex justify-center w-full mt-10" />
           ) : (
             <p className="mt-16 text-3xl font-semibold text-center normal-case text-secondary">Property not available</p>
           )
