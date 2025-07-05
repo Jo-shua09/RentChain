@@ -121,7 +121,7 @@ export default function Payment() {
     </div>
   ) : (
     <div className="w-full section-page !py-52">
-      <div className="relative w-full pt-20 bg-white">
+      <div className="relative w-full pt-8 bg-white">
         <h1 className="mb-6 text-5xl font-bold">Pay Rent</h1>
         <p className="mb-6 text-3xl normal-case text-secondary">Secure payment for {selectedTitle}</p>
 
