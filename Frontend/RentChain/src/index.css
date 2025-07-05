@@ -6,41 +6,41 @@
 @tailwind utilities;
 
 * {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-	transition: all 0.2s ease-in-out;
-	outline: none;
-	text-transform: capitalize;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  transition: all 0.2s ease-in-out;
+  outline: none;
+  text-transform: capitalize;
 }
 
 body {
-	font-family: "Poppins", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 .section {
-	padding: 10rem 0;
+  padding: 10rem 0;
 }
 
 .section-page {
-	padding: 0 5rem;
+  padding: 0 5rem;
 }
 
 html {
-	font-size: 62.5%;
-	scroll-behavior: smooth;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 @media (max-width: 991px) {
-	html {
-		font-size: 55.5%;
-	}
+  html {
+    font-size: 55.5%;
+  }
 }
 
 @media (max-width: 450px) {
-	html {
-		font-size: 50.5%;
-	}
-	.section-page {
-		padding: 0 3rem;
-	}
+  html {
+    font-size: 49%;
+  }
+  .section-page {
+    padding: 0 2rem;
+  }
 }
