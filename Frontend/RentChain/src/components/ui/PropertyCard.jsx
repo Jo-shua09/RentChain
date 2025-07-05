@@ -83,7 +83,7 @@ export default function PropertyCard({ property }) {
 
         {pathName === "/dashboard/tenant-dashboard/properties" ? (
           property.available ? (
-            <Button name="View Details" className="flex justify-center w-full mt-10" onClick={() => handleClick(property)} />
+            <Button name="View Details" className="flex justify-center w-full mt-10" onClick={handleClick} />
           ) : (
             <p className="mt-16 text-3xl font-semibold text-center normal-case text-secondary">Property not available</p>
           )
