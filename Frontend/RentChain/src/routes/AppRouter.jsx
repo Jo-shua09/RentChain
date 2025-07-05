@@ -23,6 +23,7 @@ import OwnedProperties from "../components/ui/OwnedProperties";
 import AddPropertyForm from "../components/ui/AddPropertyForm";
 import PaymentManagement from "../components/ui/PaymentManagement";
 import Complaints from "../components/ui/Complaints";
+import EditProperty from "../components/ui/EditProperty";
 
 export default function AppRouter() {
   return (
@@ -40,7 +41,7 @@ export default function AppRouter() {
           <Route path="/dashboard/landlord-dashboard/payment-management" element={<PaymentManagement />} />
           <Route path="/dashboard/landlord-dashboard/add-new-property" element={<AddPropertyForm />} />
           <Route path="/dashboard/landlord-dashboard/my-properties" element={<MyProperties />} />
-          <Route path="/dashboard/landlord-dashboard/properties/:title" element={<PropertyDetails />} />
+          <Route path="/dashboard/landlord-dashboard/my-properties/edit/:id" element={<EditProperty />} />
 
           <Route path="/dashboard/tenant-dashboard" element={<TenantDashboard />} />
           <Route path="/dashboard/tenant-dashboard/payment" element={<Payment />} />

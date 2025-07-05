@@ -1,5 +1,5 @@
 import { IoLocationOutline } from "react-icons/io5";
-import { useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Button, ButtonTwo } from "../common/Button";
 import { FaRegEdit } from "react-icons/fa";
 
@@ -8,10 +8,36 @@ export default function PropertyCard({ property }) {
   const location = useLocation();
   const pathName = location.pathname;
 
-  const handleClick = () => {
-    const basePath = pathName.includes("tenant-dashboard") ? "/dashboard/tenant-dashboard/properties" : "/dashboard/landlord-dashboard/properties";
+  const handleClick = (e) => {
+    e.stopPropagation(); // Prevent event bubbling
+    const basePath = pathName.includes("tenant-dashboard") ? "/dashboard/tenant-dashboard/properties" : "/dashboard/landlord-dashboard/my-properties";
 
     navigate(`${basePath}/${property.title.replace(/\s+/g, "-")}`, {
+      state: {
+        title: property.title,
+        location: property.location,
+        country: property.country,
+        price: property.price,
+        duration: property.duration,
+        bedrooms: property.bedrooms,
+        bathrooms: property.bathrooms,
+        type: property.type,
+        image: property.image,
+        listed_date: property.listed_date,
+        amenities: property.amenities,
+        map: property.map,
+        description: property.description,
+      },
+    });
+  };
+
+  const handleEditProperty = (e) => {
+    e.stopPropagation(); // Prevent event bubbling
+    const basePath = pathName.includes("landlord-dashboard")
+      ? "/dashboard/landlord-dashboard/my-properties"
+      : "/dashboard/tenant-dashboard/properties";
+
+    navigate(`${basePath}/edit/${property.id}`, {
       state: {
         title: property.title,
         location: property.location,
@@ -62,6 +88,7 @@ export default function PropertyCard({ property }) {
         ) : (
           <ButtonTwo
             name="edit property"
+            onClick={handleEditProperty}
             icon={<FaRegEdit className="text-4xl" />}
             className="flex justify-center w-full mt-10 border border-gray-300"
           />
