@@ -48,7 +48,7 @@ export default function AppRouter() {
           <Route path="/dashboard/tenant-dashboard/my-properties" element={<OwnedProperties />} />
           <Route path="/dashboard/tenant-dashboard/properties/payment" element={<Payment />} />
           <Route path="/dashboard/tenant-dashboard/properties" element={<Properties />} />
-          <Route path="/dashboard/tenant-dashboard/property-details/:title" element={<PropertyDetails />} />
+          <Route path="/dashboard/tenant-dashboard/properties/property-details/:title" element={<PropertyDetails />} />
           <Route path="/dashboard/tenant-dashboard/File-complaints" element={<FileComplaints />} />
           <Route path="/dashboard/tenant-dashboard/chat" element={<Chat />} />
 
