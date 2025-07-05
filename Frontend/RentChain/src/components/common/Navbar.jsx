@@ -18,6 +18,10 @@ export default function Navbar() {
     setIsOpen(false);
   };
 
+  const handleclick = () => {
+    setIsOpen(false);
+  };
+
   return isDesktop ? (
     <div className="fixed top-0 left-0 right-0 z-10 w-full">
       <div className="flex items-center justify-between w-full px-20 py-2 bg-white shadow-sm">
@@ -69,7 +73,7 @@ export default function Navbar() {
   ) : (
     <div className="fixed top-0 left-0 right-0 z-10 w-full px-12 bg-white shadow-sm sm:px-20">
       <div className="flex items-center justify-between w-full">
-        <Link to="/about">
+        <Link onClick={handleclick} to="/about">
           <div className="cursor-pointer w-fit">
             <img src="/logo.png" alt="logo image" loading="lazy" className="w-[25rem] h-fit cursor-pointer" />
           </div>
@@ -89,6 +93,7 @@ export default function Navbar() {
 
         <ul className="flex flex-col justify-start gap-16">
           <Link
+            onClick={handleclick}
             to="/about"
             className={`${
               pathname == "/about" ? "text-primary font-semibold" : ""
@@ -97,6 +102,7 @@ export default function Navbar() {
             {t("about")}
           </Link>
           <Link
+            onClick={handleclick}
             to="/dashboard"
             className={`${
               pathname == "/dashboard/landlord-dashboard" || pathname == "/dashboard/tenant-dashboard" ? "text-primary font-semibold" : ""
@@ -105,6 +111,7 @@ export default function Navbar() {
             {t("my dashboard")}
           </Link>
           <Link
+            onClick={handleclick}
             to="/contact"
             className={`${
               pathname == "/contact" ? "text-primary font-semibold" : ""
